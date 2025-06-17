@@ -71,7 +71,7 @@
                                 every piece of waste can become something meaningful and beautiful for you and for the Earth.</p>
                     </div>
                     <div class="accessory-background star2">
-                        <img src="{{asset('images/star2-background.png')}}" alt="">
+                        <img class="accessory" src="{{asset('images/star2-background.png')}}" alt="">
                     </div>
                 </div>
                 <div class="our-goals-block-horizontal-wrap">
@@ -105,12 +105,15 @@
             </div>
         </div>
         <div class="crafts-tutorial body-margin">
+            <div class="accessory-background flower">
+                <img class="accessory" src="{{asset('images/flower-background.png')}}" alt="">
+            </div>
             <div class="h2-wrap">
                 <div class="h2-inline-wrap">
-                    <div class="accessory-background crown">
-                        <img class="accessory" src="{{asset('images/crown-background.png')}}" alt="">
+                    <div class="accessory-background leaf">
+                        <img class="accessory" src="{{asset('images/leaf-background.png')}}" alt="">
                     </div>
-                    <h2 class="green">Crafts Tutorial</h2>
+                    <h2 class="green medium">Crafts Tutorial</h2>
                 </div>
             </div>
             <div class="box-container">
@@ -119,33 +122,100 @@
                         <p class="smaller bold">Pot tanaman dari botol plastik</p>
                     </div>
                     <div class="box-image-frame">
+                        <img src="{{asset('images/craft-picture-1.png')}}" alt="">
+                    </div>
+                </div>
+                <div class="box-frame">
+                    <div class="top-frame craft">
+                        <p class="smaller bold">Lorem ipsum dolor, sit amet consectetur</p>
+                    </div>
+                    <div class="box-image-frame">
+                        <img src="{{asset('images/craft-picture-2.png')}}" alt="">
+                    </div>
+                </div>
+                <div class="box-frame">
+                    <div class="top-frame craft">
+                        <p class="smaller bold">Lorem ipsum dolor, sit amet consectetur</p>
+                    </div>
+                    <div class="box-image-frame">
+                        <img src="{{asset('images/craft-picture-1.png')}}" alt="">
+                    </div>
+                </div>
+                <div class="box-frame">
+                    <div class="top-frame craft">
+                        <p class="smaller bold">Lorem ipsum dolor, sit amet consectetur</p>
+                    </div>
+                    <div class="box-image-frame">
+                        <img src="{{asset('images/craft-picture-2.png')}}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="find-out">
+                <a href="#" class="button-green">Find Out More</a>
+            </div>
+        </div>
+        <div class="created body-margin">
+            <div class="h2-wrap">
+                <div class="h2-inline-wrap">
+                    <h2 class="green medium">See what they created</h2>
+                </div>
+            </div>
+            <div class="box-container">
+                <div class="box-frame">
+                    <div class="box-image-frame">
+                        <img src="{{asset('images/craft-picture-1.png')}}" alt="">
+                        <p class="smaller black">Pot Tanaman dari Botol Plastik</p>
+                    </div>
+                </div>
+                <div class="box-frame">
+                    <div class="box-image-frame">
+                        <img src="{{asset('images/craft-picture-2.png')}}" alt="">
+                        <p class="smaller black">Lampu tidur nya bagus</p>
+                    </div>
+                </div>
+                <div class="box-frame">
+                    <div class="box-image-frame">
+                        <img src="{{asset('images/craft-picture-1.png')}}" alt="">
+                        <p class="smaller black">Dibuat dari barang bekas</p>
+                    </div>
+                </div>
+                <div class="box-frame">
+                    <div class="box-image-frame">
+                        <img src="{{asset('images/craft-picture-2.png')}}" alt="">
+                        <p class="smaller black">Creative Parah</p>
+                    </div>
+                </div>
+                <div class="accessory-background exclamation">
+                    <img src="{{asset('images/exclamation-background.png')}}" alt="" srcset="">
+                </div>
+            </div>
+            <div class="find-out">
+                <a href="#" class="button-green">Find Out More</a>
+            </div>
+        </div>
+        <div class="feedback body-margin">
+            <div class="feedback-wrap-left">
+                <div class="feedback-text">
+                    <h2 class="green medium">Feedback</h2>
+                    <p class="modified-letter-spacing">Yuk, kasih ulasan, nilai pengalamanmu, atau cukup tulis pesan manis. Setiap feedback dari 
+                        kamu sangat berarti buat kami jadi lebih baik, dan semoga bisa menginspirasi yang lain juga.</p>
+                </div>
+                <div class="feedback-testimonials">
 
-                    </div>
                 </div>
-                <div class="box-frame">
-                    <div class="top-frame craft">
-                        <p class="smaller bold">Lorem ipsum dolor, sit amet consectetur</p>
+            </div>
+            <div class="feedback-wrap-right">
+                <h2 class="green small">Berikan Feedbackmu</h2>
+                <form action="" method="post">
+                    <div class="flex-column">
+                        <label for="NameInput" class="smaller bold">Nama</label>
+                        <input id="NameInput" type="text" class="input" placeholder="Nama kamu">
                     </div>
-                    <div class="box-image-frame">
-                        
+                    <div class="flex-column">
+                        <label for="CommentInput" class="smaller bold">Ulasan</label>
+                        <textarea name="" id="CommentInput" cols="20" rows="7" class="input" placeholder="Bagikan Pengalamanmu"></textarea>
                     </div>
-                </div>
-                <div class="box-frame">
-                    <div class="top-frame craft">
-                        <p class="smaller bold">Lorem ipsum dolor, sit amet consectetur</p>
-                    </div>
-                    <div class="box-image-frame">
-                        
-                    </div>
-                </div>
-                <div class="box-frame">
-                    <div class="top-frame craft">
-                        <p class="smaller bold">Lorem ipsum dolor, sit amet consectetur</p>
-                    </div>
-                    <div class="box-image-frame">
-                        
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </body>

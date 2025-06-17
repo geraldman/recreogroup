@@ -57,6 +57,18 @@ h2.green{
     text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
 }
 
+h2.green.medium{
+    display: inline-block;
+    font-family: 'spartan-league';
+    color: #2e8264;
+    font-size: 40px;
+    text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+h2.green.small{
+    font-size: 34px;
+}
+
 p{
     font-family: 'inter';
     color: #641919;
@@ -71,23 +83,27 @@ p.small{
     font-size: 16px;
 }
 
-p.smaller{
+p.smaller, label{
     font-family: 'arial-unicode-ms';
     letter-spacing: normal;
-    color: #d9d9d9;
-    font-size: 10px;
+    color: white;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+p.smaller.black, .small.bold, p.small.black, label.smaller.bold{
+    color: black;
 }
 
 p.smaller.bold{
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     font-family: 'arial-unicode-ms-bold';
-    line-height: 14px;
+    line-height: 12px;
     font-weight: 700;
 }
 
-
-p.small.bold{
+p.small.bold, label.small.bold{
     color: white;
     font-size: 21px;
     letter-spacing: 0.5px;
@@ -95,8 +111,21 @@ p.small.bold{
     line-height: 20px;
 }
 
+label.smaller.bold{
+    color: black;
+    font-size: 15px;
+    font-family: 'arial-unicode-ms-bold';
+    line-height: 20px;
+    padding-left: 10px;
+}
+
 .body-margin{
     margin: auto 160px;
+}
+
+.modified-letter-spacing{
+    letter-spacing: 1.5px;
+    line-height: 25px;
 }
 
 .button-green{
@@ -115,3 +144,14 @@ p.small.bold{
     opacity: 0.7;
 }
 
+.input{
+    width: 100%;
+    margin-top: 7px;
+    border: 2px solid rgba(70, 143, 116, 0.5);
+    padding: 10px 5px 10px 13px;
+    background-color: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    resize: none;
+    font-size: 14px;
+}

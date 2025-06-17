@@ -4,8 +4,30 @@
     opacity: 0.7;
 }
 
-.our-goals-block.vertical .accessory-background img.accessory{
+.our-goals-block img.accessory{
     border: none;
+}
+
+.accessory-background.exclamation{
+    position: absolute;
+    top: 0;
+    right: -60px; 
+    width: 175px;
+    max-width: 20vw;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.accessory-background.paperclip {
+    position: absolute;
+    top: -75px;
+    left: -60px; 
+    width: 150px;
+    max-width: 20vw;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.7;
 }
 
 .accessory-background.paperclip {
@@ -48,6 +70,7 @@
     display: block;
     border-radius: 0px;
     border: 0;
+    border: none;
 }
 
 .accessory-background.crown{
@@ -55,6 +78,28 @@
     top: -50px;
     left: -35px;
     width: 65px;
+    max-width: 20vw;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.accessory-background.leaf{
+    position: absolute;
+    top: -33px;
+    left: -32px;
+    width: 65px;
+    max-width: 20vw;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.accessory-background.flower{
+    position: absolute;
+    top: -90px;
+    left: 30px;
+    width: 220px;
     max-width: 20vw;
     height: auto;
     pointer-events: none;
@@ -203,10 +248,9 @@
     position: relative;
 }
 
-.crafts-tutorial{
+.crafts-tutorial, .created{
     position: relative;
-    margin-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,29 +258,86 @@
 
 .box-container{
     padding: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 50px;
+    gap: 30px;
+    border-radius: 10px;
 }
 
 .box-frame{
     display: block;
     width: 25%;
     background-color: white;
-    height: 350px;
-    border-radius: 12px;
+    height: max-content;
+    border-radius: inherit;
+    border: 1.5px solid rgba(68, 45, 32, 0);
+    overflow: hidden;
+    padding-bottom: 10px;
 }
 
 .top-frame{
-    display: flex;
-    height: 50px;
-    padding: 10px;
     background-color: #7f6044;
+    display: flex;
+    height: 40px;
+    padding: 10px 18px 8px 18px;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     align-items: center;
     text-align: center;
     justify-content: center;
 }
+
+.box-image-frame{
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    background: white;
+    padding: 16px 18px 5px 18px;
+}
+
+.box-image-frame img{
+    width: 100%;
+}
+
+.box-image-frame p{
+    padding-top: 5px;
+}
+
+.feedback{
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.feedback-wrap-left{
+    width: 60%;
+}
+
+.feedback-wrap-right{
+    background-color: white;
+    padding: 30px;
+    width: 40%;
+    border: 2px solid #468f74;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.feedback-wrap-right form{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
