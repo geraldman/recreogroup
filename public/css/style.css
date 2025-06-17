@@ -71,6 +71,22 @@ p.small{
     font-size: 16px;
 }
 
+p.smaller{
+    font-family: 'arial-unicode-ms';
+    letter-spacing: normal;
+    color: #d9d9d9;
+    font-size: 10px;
+}
+
+p.smaller.bold{
+    color: white;
+    font-size: 14px;
+    font-family: 'arial-unicode-ms-bold';
+    line-height: 14px;
+    font-weight: 700;
+}
+
+
 p.small.bold{
     color: white;
     font-size: 21px;

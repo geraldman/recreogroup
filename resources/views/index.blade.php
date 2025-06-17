@@ -57,7 +57,7 @@
             <div class="h2-wrap">
                 <div class="h2-inline-wrap">
                     <div class="accessory-background crown">
-                        <img src="{{asset('images/crown-background.png')}}" alt="">
+                        <img class="accessory" src="{{asset('images/crown-background.png')}}" alt="">
                     </div>
                     <h2 class="green">Our Goals</h2>
                 </div>
@@ -69,6 +69,9 @@
                         <p class="small bold">Recreo transforms waste into wonder one creation at a time</p>
                         <p class="small">What we throw away still holds magic. With a little creativity, 
                                 every piece of waste can become something meaningful and beautiful for you and for the Earth.</p>
+                    </div>
+                    <div class="accessory-background star2">
+                        <img src="{{asset('images/star2-background.png')}}" alt="">
                     </div>
                 </div>
                 <div class="our-goals-block-horizontal-wrap">
@@ -94,7 +97,54 @@
                         <p class="small bold">Recreate the world, beautifully</p>
                         <p class="small">You don't need new things to make something amazing. 
                             With your hands and heart, you can reshape the world with beauty and care.</p>
-                    </div>                    
+                    </div>
+                    <div class="accessory-background star">
+                        <img class="accessory" src="{{asset('images/star-background.png')}}" alt="">
+                    </div>                 
+                </div>
+            </div>
+        </div>
+        <div class="crafts-tutorial body-margin">
+            <div class="h2-wrap">
+                <div class="h2-inline-wrap">
+                    <div class="accessory-background crown">
+                        <img class="accessory" src="{{asset('images/crown-background.png')}}" alt="">
+                    </div>
+                    <h2 class="green">Crafts Tutorial</h2>
+                </div>
+            </div>
+            <div class="box-container">
+                <div class="box-frame">
+                    <div class="top-frame craft">
+                        <p class="smaller bold">Pot tanaman dari botol plastik</p>
+                    </div>
+                    <div class="box-image-frame">
+
+                    </div>
+                </div>
+                <div class="box-frame">
+                    <div class="top-frame craft">
+                        <p class="smaller bold">Lorem ipsum dolor, sit amet consectetur</p>
+                    </div>
+                    <div class="box-image-frame">
+                        
+                    </div>
+                </div>
+                <div class="box-frame">
+                    <div class="top-frame craft">
+                        <p class="smaller bold">Lorem ipsum dolor, sit amet consectetur</p>
+                    </div>
+                    <div class="box-image-frame">
+                        
+                    </div>
+                </div>
+                <div class="box-frame">
+                    <div class="top-frame craft">
+                        <p class="smaller bold">Lorem ipsum dolor, sit amet consectetur</p>
+                    </div>
+                    <div class="box-image-frame">
+                        
+                    </div>
                 </div>
             </div>
         </div>
