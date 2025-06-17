@@ -1,3 +1,51 @@
+.accessory-background{
+    z-index: -1;
+    position: relative;
+    opacity: 0.7;
+}
+
+.accessory-background.paperclip {
+    position: absolute;
+    top: -75px;
+    left: -60px; 
+    width: 150px;
+    max-width: 20vw;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.accessory-background img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.accessory-background.crown{
+    position: absolute;
+    top: -50px;
+    left: -35px;
+    width: 65px;
+    max-width: 20vw;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.accessory-background.pink-bear {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 80px;
+    max-width: 20vw;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
 .hero-wrap{ 
     display: inline-flex;
     margin-top: 120px;
@@ -32,4 +80,96 @@
     background-color: #c6c5ae;
     padding: 30px;
     border-radius: 20px;
+    position: relative;
+}
+
+.our-goals{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.wrap-our-goals{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    gap: 40px;
+}
+
+.our-goals-block{
+    background-color: #2e8264;
+    border-radius: 40px;
+    padding: 25px;
+}
+
+.our-goals-block img{
+    display: inline-block;
+    width: auto;
+    border-radius: 13%;
+    background: none !important;
+    border: 4px solid white;
+}
+
+.our-goals-block.vertical{
+    width: 25%;
+}
+
+.our-goals-block.vertical img{
+    width: 100%;
+}
+
+.our-goals-block.horizontal img{
+    width: 30%;
+    height: auto;
+}
+
+.our-goals-block.horizontal{
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-goals-block-horizontal-wrap{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 40px;
+}
+
+.text-wrap p{
+    margin-top: 18px;
+}
+
+.our-goals-block.horizontal .text-wrap .small.bold{
+    margin-top: 0px;
+}
+
+.our-goals-block.vertical .text-wrap .small{
+    text-align: left;
+}
+
+.our-goals-block.vertical .text-wrap .small.bold{
+    text-align: center;
+}
+
+.our-goals-block.horizontal.one{
+    text-align: right;
+}
+
+.our-goals-block.horizontal.two{
+    text-align: left;
+}
+
+.h2-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.h2-inline-wrap{
+    position: relative;
 }

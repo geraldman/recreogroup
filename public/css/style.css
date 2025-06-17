@@ -24,6 +24,16 @@ body{
     src: url('../fonts/league-spartan/LeagueSpartan-VariableFont_wght.ttf');
 }
 
+@font-face{
+    font-family: 'arial-unicode-ms';
+    src: url('../fonts/arial-unicode-ms/arial\ unicode\ ms.otf');
+}
+
+@font-face{
+    font-family: 'arial-unicode-ms-bold';
+    src:url('../fonts/arial-unicode-ms/arial\ unicode\ ms\ bold.otf');
+}
+
 a{
     text-decoration: none;
     font-family: 'inter';
@@ -39,6 +49,14 @@ h2{
     text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
 }
 
+h2.green{
+    display: inline-block;
+    font-family: 'spartan-league';
+    color: #2e8264;
+    font-size: 60px;
+    text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
 p{
     font-family: 'inter';
     color: #641919;
@@ -46,11 +64,28 @@ p{
     letter-spacing: 3px;
 }
 
+p.small{
+    font-family: 'arial-unicode-ms';
+    letter-spacing: normal;
+    color: #d9d9d9;
+    font-size: 16px;
+}
+
+p.small.bold{
+    color: white;
+    font-size: 21px;
+    letter-spacing: 0.5px;
+    font-family: 'arial-unicode-ms-bold';
+    line-height: 20px;
+}
+
 .body-margin{
-    margin: auto 120px;
+    margin: auto 160px;
 }
 
 .button-green{
+    display: inline-block;
+    width: auto;
     padding: 12px 40px;
     border-radius:30px;
     background-color: #2E8264;
