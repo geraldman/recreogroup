@@ -26,6 +26,15 @@
     gap: 50px;
 }
 
+.navbar-links a{
+    font-weight: inherit;
+    transition: 0.5s ease;
+}
+
+.navbar-links a:hover{
+    font-weight: 575;
+}
+
 .navbar-links{
     display: flex;
     align-items: center;

@@ -69,11 +69,34 @@ h2.green.small{
     font-size: 34px;
 }
 
+h2.green.smaller{
+    font-size: 30px;
+}
+
 p{
     font-family: 'inter';
     color: #641919;
     font-size: 20px;
     letter-spacing: 3px;
+}
+
+p.bold.black{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+p.light-small.black{
+    font-size: 14px;
+    color: black;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+p.small.italic.bold{
+    color: black;
+    font-style: italic;
+    font-size: 14px;
 }
 
 p.small{
@@ -91,7 +114,7 @@ p.smaller, label{
     line-height: 12px;
 }
 
-p.smaller.black, .small.bold, p.small.black, label.smaller.bold{
+p.smaller.black, .small.bold.black, .small.black, label.smaller.bold, p.smaller.bold.black{
     color: black;
 }
 
@@ -124,6 +147,7 @@ label.smaller.bold{
 }
 
 .modified-letter-spacing{
+    margin-top: 5px;
     letter-spacing: 1.5px;
     line-height: 25px;
 }
@@ -133,8 +157,16 @@ label.smaller.bold{
     width: auto;
     padding: 12px 40px;
     border-radius:30px;
+    border: 1px solid transparent;
     background-color: #2E8264;
     color: white;
+    transition: 0.25s ease;
+}
+
+.button-green:hover{
+    background-color: white;
+    border: 1px solid #2E8264;
+    color: #2E8264;
 }
 
 .background-accessory{
@@ -147,11 +179,58 @@ label.smaller.bold{
 .input{
     width: 100%;
     margin-top: 7px;
-    border: 2px solid rgba(70, 143, 116, 0.5);
+    border: 2px solid rgba(70, 143, 116, 0.8);
     padding: 10px 5px 10px 13px;
     background-color: none;
     border-radius: 10px;
     box-sizing: border-box;
     resize: none;
     font-size: 14px;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse; /* Display stars from right to left */
+    justify-content: center;
+    padding: 1.5rem;
+    gap: 15px;
+}
+
+.star-display{
+    flex-direction: row;
+    pointer-events: none;
+    font-size: 30px;
+    padding: 0;
+}
+
+.star-rating input[type="radio"] {
+    display: none; /* Hide the actual radio buttons */
+}
+
+.star{
+    color: #ccc;
+}
+
+.star-rating label{
+    color: #ccc; /* Default star color (grey) */
+    cursor: pointer;
+    padding: 0 0.2rem;
+    font-size: 40px;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover effect: change color of stars to the left of the hovered star */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #ffcc00; 
+    transform: scale(1.1); 
+}
+
+.star-rating input[type="radio"]:checked ~ label,
+.star-display .star.filled{
+    color: #ffcc00; /* Yellow when checked */
+}
+
+.rounded-lg {
+    transition: border-radius 0.3s ease-in-out;
 }

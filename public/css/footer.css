@@ -1,0 +1,120 @@
+.footer{
+    margin-top:50px;
+    background-color: white;
+    height: max-content;
+    padding-top: 40px;
+}
+
+.footer-wrap{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.wrap-footer-left{
+    width: 55%;
+    padding-right: 60px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.footer p{
+    color: black;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.wrap-footer-right{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 80px;
+}
+
+.footer h2{
+    text-shadow: none;
+}
+
+img.footer-logo{
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.text-line-wrap{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.text-line-wrap hr{
+    width: 55px;
+    margin-top: 0;
+    border: 2.5px solid #ffbe0d;
+    z-index: 2;
+    top: 47px;
+    position: absolute;
+}
+
+.footer-links{
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a, .contact-box p{
+    font-weight: 375;
+    transition: 0.5s ease;
+}
+
+.footer-links a:hover{
+    font-weight: 575;
+}
+
+.footer-subwrap{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+}
+
+.contact-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-box img{
+    width: 50px;
+    height: auto;
+}
+
+.bottom-left-footer-wrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bottom-left-footer-wrap p{
+    display: inline-block;
+    justify-self: center;
+}
+
+.bottom-left-footer-wrap img{
+    margin-left: -15px;
+    width: 60px;
+}
+
+hr{
+    margin-top: 5px;
+    border-top: 1px solid #2e8264;
+}
+
+.copyright-text p{
+    color: #2e8264;
+    padding: 10px;
+    text-align: center;
+}

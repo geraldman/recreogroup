@@ -8,25 +8,12 @@
         <link rel="stylesheet" href="{{ asset('css/style.css')}}">
         <link rel="stylesheet" href="{{ asset('css/navbar.css')}}">
         <link rel="stylesheet" href="{{ asset('css/index.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/footer.css')}}">
+        <script src="{{ asset('js/navbar.js')}}"></script>
+        <script src="{{ asset('js/index.js')}}"></script>
     </head>
     <body>
-        <div class="navbar">
-            <div class="body-margin navbar-wrap">
-                <div class="navbar-image">
-                    <img src="{{asset('images/recreo-logo-cropped.svg')}}" alt="" srcset="">
-                </div>
-                <div class="navbar-links">
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Crafts Tutorial</a>
-                    <a href="#">Creation</a>
-                    <a href="#">Feedback</a>
-                </div>
-                <div class="navbar-button">
-                    <a href="#" class="button-green">Contact Us</a>
-                </div>
-            </div>
-        </div>
+        @include('navbar')
         <div class="hero-wrap body-margin">
             <div class="hero-image-section">
                 <img src="{{asset('images/landing-page-photo.jpg')}}" alt="">
@@ -70,9 +57,9 @@
                         <p class="small">What we throw away still holds magic. With a little creativity, 
                                 every piece of waste can become something meaningful and beautiful for you and for the Earth.</p>
                     </div>
-                    <div class="accessory-background star2">
-                        <img class="accessory" src="{{asset('images/star2-background.png')}}" alt="">
-                    </div>
+                </div>
+                <div class="accessory-background star2">
+                    <img class="accessory" src="{{asset('images/star2-background.png')}}" alt="">
                 </div>
                 <div class="our-goals-block-horizontal-wrap">
                     <div class="our-goals-block horizontal one">
@@ -97,11 +84,11 @@
                         <p class="small bold">Recreate the world, beautifully</p>
                         <p class="small">You don't need new things to make something amazing. 
                             With your hands and heart, you can reshape the world with beauty and care.</p>
-                    </div>
-                    <div class="accessory-background star">
-                        <img class="accessory" src="{{asset('images/star-background.png')}}" alt="">
-                    </div>                 
+                    </div>               
                 </div>
+                <div class="accessory-background star">
+                    <img class="accessory" src="{{asset('images/star-background.png')}}" alt="">
+                </div>  
             </div>
         </div>
         <div class="crafts-tutorial body-margin">
@@ -123,6 +110,9 @@
                     </div>
                     <div class="box-image-frame">
                         <img src="{{asset('images/craft-picture-1.png')}}" alt="">
+                        <div class="box-image-overlay">
+                            <a href="#" class="overlay-text">Lihat lebih lanjut</a>
+                        </div>
                     </div>
                 </div>
                 <div class="box-frame">
@@ -131,6 +121,9 @@
                     </div>
                     <div class="box-image-frame">
                         <img src="{{asset('images/craft-picture-2.png')}}" alt="">
+                        <div class="box-image-overlay">
+                            <a href="#" class="overlay-text">Lihat lebih lanjut</a>
+                        </div>
                     </div>
                 </div>
                 <div class="box-frame">
@@ -139,6 +132,9 @@
                     </div>
                     <div class="box-image-frame">
                         <img src="{{asset('images/craft-picture-1.png')}}" alt="">
+                        <div class="box-image-overlay">
+                            <a href="#" class="overlay-text">Lihat lebih lanjut</a>
+                        </div>
                     </div>
                 </div>
                 <div class="box-frame">
@@ -147,6 +143,9 @@
                     </div>
                     <div class="box-image-frame">
                         <img src="{{asset('images/craft-picture-2.png')}}" alt="">
+                        <div class="box-image-overlay">
+                            <a href="#" class="overlay-text">Lihat lebih lanjut</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -165,6 +164,9 @@
                     <div class="box-image-frame">
                         <img src="{{asset('images/craft-picture-1.png')}}" alt="">
                         <p class="smaller black">Pot Tanaman dari Botol Plastik</p>
+                        <div class="box-image-overlay">
+                            <a href="#" class="overlay-text">Lihat lebih lanjut</a>
+                        </div>
                     </div>
                 </div>
                 <div class="box-frame">
@@ -194,6 +196,15 @@
             </div>
         </div>
         <div class="feedback body-margin">
+            <div class="accessory-background star3">
+                <img src="{{asset('images/star3-background.png')}}" alt="" srcset="">
+            </div>
+            <div class="accessory-background banner">
+                <img src="{{asset('images/banner-background.png')}}" alt="" srcset="">
+            </div>
+            <div class="accessory-background puzzle">
+                <img src="{{asset('images/puzzle-background.png')}}" alt="" srcset="">
+            </div>
             <div class="feedback-wrap-left">
                 <div class="feedback-text">
                     <h2 class="green medium">Feedback</h2>
@@ -201,22 +212,184 @@
                         kamu sangat berarti buat kami jadi lebih baik, dan semoga bisa menginspirasi yang lain juga.</p>
                 </div>
                 <div class="feedback-testimonials">
-
+                    <h2 class="green smaller">Yuk, intip pendapat mereka!</h2>
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-block">
+                            <div class="star-rating star-display">
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <div class="testimonial-text">
+                                <div class="text-center">
+                                    <p class="light-small black">"As an art teacher, I now use some of your ideas in class. 
+                                    The kids are more excited than ever!"</p>
+                                </div>
+                                <div class="text-bottom">
+                                    <p class="small italic bold">-Mr. Raymond, teacher</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-block">
+                            <div class="star-rating star-display">
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <div class="testimonial-text">
+                                <div class="text-center">
+                                    <p class="light-small black">"Nice"</p>
+                                </div>
+                                <div class="text-bottom">
+                                    <p class="small italic bold">-Anjelin</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-block">
+                            <div class="star-rating star-display">
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <div class="testimonial-text">
+                                <div class="text-center">
+                                    <p class="light-small black">"As an art teacher, I now use some of your ideas in class. 
+                                    The kids are more excited than ever!"</p>
+                                </div>
+                                <div class="text-bottom">
+                                    <p class="small italic bold">-Anjelin</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-block">
+                            <div class="star-rating star-display">
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <div class="testimonial-text">
+                                <div class="text-center">
+                                    <p class="light-small black">"Nice"</p>
+                                </div>
+                                <div class="text-bottom">
+                                    <p class="small italic bold">-Anjelin</p>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="testimonial-block">
+                            <div class="star-rating star-display">
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <div class="testimonial-text">
+                                <div class="text-center">
+                                    <p class="light-small black">"As an art teacher, I now use some of your ideas in class. 
+                                    The kids are more excited than ever!"</p>
+                                </div>
+                                <div class="text-bottom">
+                                    <p class="small italic bold">-Mr. Raymond, teacher</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-block">
+                            <div class="star-rating star-display">
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <div class="testimonial-text">
+                                <div class="text-center">
+                                    <p class="light-small black">"Nice"</p>
+                                </div>
+                                <div class="text-bottom">
+                                    <p class="small italic bold">-Anjelin</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-block">
+                            <div class="star-rating star-display">
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <div class="testimonial-text">
+                                <div class="text-center">
+                                    <p class="light-small black">"Nice"</p>
+                                </div>
+                                <div class="text-bottom">
+                                    <p class="small italic bold">-Anjelin</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-block">
+                            <div class="star-rating star-display">
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star filled">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                            </div>
+                            <div class="testimonial-text">
+                                <div class="text-center">
+                                    <p class="light-small black">"Nice"</p>
+                                </div>
+                                <div class="text-bottom">
+                                    <p class="small italic bold">-Anjelin</p>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
                 </div>
             </div>
             <div class="feedback-wrap-right">
-                <h2 class="green small">Berikan Feedbackmu</h2>
+                <h2 class="green smaller">Berikan Feedbackmu</h2>
                 <form action="" method="post">
                     <div class="flex-column">
                         <label for="NameInput" class="smaller bold">Nama</label>
-                        <input id="NameInput" type="text" class="input" placeholder="Nama kamu">
+                        <input id="NameInput" type="text" class="input" placeholder="Nama kamu" required>
                     </div>
                     <div class="flex-column">
                         <label for="CommentInput" class="smaller bold">Ulasan</label>
-                        <textarea name="" id="CommentInput" cols="20" rows="7" class="input" placeholder="Bagikan Pengalamanmu"></textarea>
+                        <textarea name="" id="CommentInput" cols="20" rows="7" class="input" placeholder="Bagikan Pengalamanmu" required></textarea>
                     </div>
-                </form>
+                    <div class="flex-column">
+                        <label class="smaller bold">Beri kami rating!</label>
+                        <div class="star-rating flex">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5" title="5 stars">&#9733;</label>
+
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4" title="4 stars">&#9733;</label>
+
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3" title="3 stars">&#9733;</label>
+
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2" title="2 stars">&#9733;</label>
+
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1" title="1 star">&#9733;</label>
+                        </div>
+                    </div>
+                    <input type="submit" class="button-green" style="margin: auto 50px; font-weight:bold;" value="Send">
+                </form> 
             </div>
         </div>
+        @include('footer')
     </body>
 </html>

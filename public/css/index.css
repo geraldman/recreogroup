@@ -63,6 +63,39 @@
     opacity: 0.7;
 }
 
+.accessory-background.star3{
+    position: absolute;
+    top: -150px;
+    left: -150px; 
+    width: 600px;
+    max-width: 22vw;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.accessory-background.banner{
+    position: absolute;
+    top: -130px;
+    right: -100px; 
+    width: 210px;
+    max-width: 20vw;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.accessory-background.puzzle{
+    position: absolute;
+    bottom: -30px;
+    left: -100px; 
+    width: 150px;
+    max-width: 20vw;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
 
 .accessory-background img {
     width: 100%;
@@ -175,6 +208,17 @@
     background-color: #2e8264;
     border-radius: 40px;
     padding: 25px;
+    transition: 500ms ease;
+}
+
+.our-goals-block:hover{
+    transform: scale(1.02);
+    background-color: #409476;
+    color: white;
+}
+
+.our-goals-block:hover .text-wrap p{
+    color: white;
 }
 
 .our-goals-block img{
@@ -279,8 +323,60 @@
     padding-bottom: 10px;
 }
 
+.box-image-frame{
+    height: auto;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    background: white;
+    padding: 16px 18px 5px 18px;
+    position: relative;
+    transition: .5s ease;
+    opacity: 1;
+}
+
+.box-image-overlay{
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}   
+
+.overlay-text{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+a.overlay-text{
+    font-family: 'arial-unicode-ms';
+    font-size: 14px;
+    color: white;
+    line-height: 16px;
+    letter-spacing: normal;
+    padding: 7px 10px;
+    background: rgb(127, 96, 68);
+    border-radius: 10px;
+}
+
+.box-image-frame:hover .box-image-overlay{
+    height: 100%;
+}
+
 .top-frame{
-    background-color: #7f6044;
+    background-color: rgb(127, 96, 68);
     display: flex;
     height: 40px;
     padding: 10px 18px 8px 18px;
@@ -289,13 +385,6 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-}
-
-.box-image-frame{
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    background: white;
-    padding: 16px 18px 5px 18px;
 }
 
 .box-image-frame img{
@@ -307,23 +396,29 @@
 }
 
 .feedback{
+    position: relative;
     display: flex;
     flex-direction: row;
-    gap: 80px;
-    padding-top: 30px;
-    padding-bottom: 100px;
-    padding-left: 30px;
-    padding-right: 30px;
+    gap: 100px;
+    padding: auto;
+}
+
+.feedback.body-margin{
+    padding-top: 50px;
+    padding-bottom: 70px;
 }
 
 .feedback-wrap-left{
-    width: 60%;
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .feedback-wrap-right{
     background-color: white;
     padding: 30px;
-    width: 40%;
+    width: 38%;
     border: 2px solid #468f74;
     border-radius: 40px;
     text-align: center;
@@ -341,3 +436,99 @@
     flex-direction: column;
 }
 
+.feedback-testimonials{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 10px;
+    position: relative;
+}
+
+.testimonial-wrap{
+    width: flex; /*this is used for futher development with buttons jangan dihapus*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 55px;
+    will-change: transform;
+    animation: scroll-left 20s linear infinite;
+}
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-215%); /* Will change depending on how many items */
+    }
+}
+
+.testimonial-block{
+    background-color: white;
+    border: 2px solid #2e8264;
+    border-radius: 30px;
+    padding: 10px 40px;
+    padding-bottom: 30px;
+
+    width: calc(50% - 27.5px);
+    flex-shrink: 0;
+    box-sizing: border-box;
+
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+}
+
+.testimonial-text{
+    height: 80%;
+    gap: 10px;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.text-bottom{
+    padding: top 10px;
+    margin-top: auto;
+}
+
+.text-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/*new css*/
+
+.testimonial-actions {
+    display: flex;
+    justify-content: center; /* Pushes buttons to ends, dots to center */
+    align-items: center;
+    width: 100%; /* Occupy full width of its parent */
+    padding: 20px 0; /* Add some vertical padding */
+}
+
+.pagination-dots {
+    display: flex;
+    gap: 10px; /* Space between dots */
+}
+
+.dot {
+    width: 15px; /* Length of the bar/dot */
+    height: 6px; /* Height of the bar/dot */
+    background-color: #9cd1b9; /* Lighter green for inactive dots */
+    border-radius: 3px; /* Slightly rounded corners for bar effect */
+    cursor: pointer;
+    transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.dot.active {
+    background-color: #2e8264; /* Darker green for active dot/bar */
+    width: 30px; /* Longer for the active one */
+}
