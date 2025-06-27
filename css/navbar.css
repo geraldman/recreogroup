@@ -13,8 +13,14 @@
 .navbar-wrap{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    gap: 50px;
+}
+
+.left-navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .navbar-image img{
@@ -39,3 +45,12 @@
     display: flex;
     align-items: center;
 }
+
+.dropdown{
+    display: none;
+}
+
+.dropdown img{
+    height: 30px;
+}
+

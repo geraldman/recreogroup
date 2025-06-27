@@ -513,3 +513,15 @@ a.overlay-text{
     background-color: #2e8264; /* Darker green for active dot/bar */
     width: 30px; /* Longer for the active one */
 }
+
+@media (max-width:1024px){
+
+}
+
+@media (max-width:768px){
+
+}
+
+@media (max-width:480   px){
+
+}
