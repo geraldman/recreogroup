@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReCreo Crafts Tutorial</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/creates.css">
+</head>
+<body>
+    <div class="main-container">    
+        <div class="header">
+            <i class="fas fa-upload"></i>
+            Upload Crafts Tutorial Kamu
+        </div>
+
+        <div class="form-content">
+            <form id="tutorialForm">
+             
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nama_kamu">Nama kamu</label>
+                        <input type="text" id="nama_kamu" name="nama_kamu" placeholder="Nama kamu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="kategori_bahan">Kategori berdasarkan bahan</label>
+                        <select id="kategori_bahan" name="kategori_bahan" required>
+                            <option value="">Pilih kategori bahan</option>
+                            <option value="plastik">Plastik</option>
+                            <option value="kain">Kain</option>
+                            <option value="kertas">Kertas</option>
+                            <option value="kayu">Kayu</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Judul Kreasi -->
+                <div class="form-group full-width">
+                    <label for="judul_kreasi">Judul kreasi</label>
+                    <input type="text" id="judul_kreasi" name="judul_kreasi" placeholder="Kasih judul tutorial kamu" required>
+                  
+                </div>
+
+              
+                <div class="upload-section">
+                    
+                    <div class="upload-group">
+                        <h5 class="upload-title">Upload hasil foto</h5>
+                        <div class="upload-area" onclick="document.getElementById('hasil_foto').click()">
+                            <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                            <p class="upload-text">Unggah 1 foto (format: png/jpeg/jpg)</p>
+                            <input type="file" id="hasil_foto" name="hasil_foto" accept="image/*" style="display: none;" required>
+                        </div>
+                    </div>
+
+                    <div class="upload-group">
+                        <h5 class="upload-title">Upload tutorial foto</h5>
+                        <div class="upload-area" onclick="document.getElementById('tutorial_foto').click()">
+                            <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                            <p class="upload-text">Unggah maksimal 10 file (format: png/jpeg/jpg)</p>
+                            <input type="file" id="tutorial_foto" name="tutorial_foto" accept="image/*" multiple style="display: none;" required>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="content-section">
+                  
+                    <div class="content-group">
+                        <h5 class="content-title">Bahan dan alat yang dibutuhkan :</h5>
+                        <div class="textarea-container">
+                            <textarea id="bahan_alat" name="bahan_alat" placeholder="Contoh:&#10;- 1 buah kardus ukuran sedang&#10;- Gunting dan cutter&#10;- Lem tembak atau lem putih&#10;- Kertas warna atau cat akrilik" required></textarea>
+                            <div class="contoh-text">CONTOH</div>
+                        </div>
+                    </div>
+
+                    <div class="content-group">
+                        <h5 class="content-title">Langkah-langkah Tutorial :</h5>
+                        <div class="textarea-container">
+                            <textarea id="langkah_tutorial" name="langkah_tutorial" placeholder="1. Potong kardus sesuai ukuran yang diinginkan untuk bagian utama.&#10;2. Rekatkan setiap sisi menggunakan lem hingga membentuk kotak dasar.&#10;3. Hiasi permukaan luar dengan kertas warna atau cat.&#10;4. Tambahkan detail atau dekorasi tambahan sesuai selera." required></textarea>
+                            <div class="contoh-text">CONTOH</div>
+                        </div>
+                    </div>
+                </div>
+
+             
+            
+                <div class="form-actions">
+                    <button type="button" class="btn-back" onclick="resetForm()">
+                        Kembali
+                    </button>
+                    <button type="submit" class="btn-submit">
+                        Bagikan sekarang
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function resetForm() {
+            if (confirm('Apakah Anda yakin ingin mengosongkan form?')) {
+                document.getElementById('tutorialForm').reset();
+            }
+        }
+
+    
+        document.getElementById('hasil_foto').addEventListener('change', function(e) {
+            if (e.target.files.length > 0) {
+                const fileName = e.target.files[0].name;
+                const uploadArea = e.target.parentElement;
+                uploadArea.querySelector('.upload-text').textContent = `File dipilih: ${fileName}`;
+            }
+        });
+
+        document.getElementById('tutorial_foto').addEventListener('change', function(e) {
+            if (e.target.files.length > 0) {
+                const fileCount = e.target.files.length;
+                const uploadArea = e.target.parentElement;
+                uploadArea.querySelector('.upload-text').textContent = `${fileCount} file dipilih`;
+            }
+        });
+    </script>
+</body>
+</html>

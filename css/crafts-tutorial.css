@@ -1,0 +1,435 @@
+:root{
+--sidebar-width: 150px;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Leauge Spartan',Tahoma, Geneva, Verdana, sans-serif;
+background-color: #f5f5f5;
+min-height: 100vh;
+line-height: 1.6;
+}
+
+
+.header {
+background-color: white;
+padding: 15px 0;
+box-shadow: 0 2px 45px rgba(0,0,0,0.1);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.nav-container {
+max-width: 1400px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+.nav-menu {
+display: flex;
+align-items: center;
+gap: 55px;
+margin-left: 320px;
+}
+
+.nav-item {
+text-decoration: none;
+color: #666;
+font-weight: 500;
+transition: color 0.3s;
+}
+
+.nav-item:hover {
+color: #482323;
+}
+
+.nav-item.active {
+color: #482323;
+font-weight: 600;
+}
+
+.contact-btn {
+background: linear-gradient(135deg, #12582c, #147939);
+color: white;
+border: none;
+padding: 12px 25px;
+border-radius: 25px;
+font-weight: 600;
+cursor: pointer;
+transition: transform 0.2s;
+margin-left: 50px;
+}
+
+.contact-btn:hover {
+transform: translateY(-2px);
+}
+
+
+.main-container {
+max-width: 1400px;
+margin: 0 auto;
+display: flex;
+gap: 20px;
+padding: 20px;
+position: relative;
+}
+
+
+.content {
+display: block;
+width: 100%;
+}
+
+.sidebar {
+height: 120%;
+width: var(--sidebar-width);
+background-color: #2c7d63;
+color: white;
+padding-left: 32px;
+padding-right: 32px;
+padding-top: 100px;
+display: block;
+flex-direction: column;
+align-items: center;
+position: fixed;
+transition: 0.3s;
+}
+
+.sidebar.scrolled{
+padding-top: 60px;
+}
+
+.upload-btn {
+background-color: #f1f1f1;
+color: #333;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 10px;
+width: 100%;
+border-radius: 8px;
+margin-bottom: 15px;
+cursor: pointer;
+text-align: center;
+max-width: 100px;
+}
+
+.upload-btn img {
+width: 40px;
+height: 40px;
+object-fit: contain;
+margin-bottom: 10px;
+}
+
+.upload-btn p {
+margin-top: 5px;
+font-size: 12px;
+}
+
+.categories {
+display: flex;
+flex-direction: column;
+gap: 10px;
+width: 100%;
+}
+
+.upload-category{
+display: flex;
+flex-direction: column;
+text-align: center;
+gap: 5px;
+}
+
+.category {
+height: 83px;
+background-color: #ffffff;
+color: #333;
+display: flex;
+flex-direction: column;
+align-items: center;
+border: 3px solid #7F6044;
+border-radius: 20px;
+width: 100%;
+text-align: center;
+cursor: pointer;
+justify-content: center;
+align-items: center;
+}
+
+.category img {
+width: 35px;
+height: 35px;
+object-fit: contain;
+margin-bottom: 5px;
+}
+
+.content-area {
+width: auto;
+margin-left: var(--sidebar-width);
+flex: 1;
+padding: 0 80px;
+padding-top: 80px;
+}
+
+.search-container {
+margin: 40px auto;
+}
+
+.search-box {
+position: relative;
+
+width: 100%;
+box-sizing: border-box;
+
+}
+
+.search-icon {
+position: absolute;
+left: 15px;
+top: 50%;
+transform: translateY(-50%);
+color: #999;
+font-size: 16px;
+}
+
+.search-input {
+width: 100%;
+padding: 15px 15px 15px 45px;
+border: 2px solid #e5e5e5;
+border-radius: 25px;
+font-size: 16px;
+outline: none;
+background: white;
+transition: border-color 0.3s;
+}
+
+.search-input:focus {
+border-color: rgb(119, 52, 52);
+}
+
+
+.tutorial-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto-fit untuk memenuhi lebar */
+gap: 40px;
+margin-bottom: 40px;
+width: 100%;
+}
+
+.tutorial-card {
+background: white;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+transition: transform 0.3s, box-shadow 0.3s;
+width: 100%;
+min-width: 180px;
+max-width: 250px;
+justify-self: center;
+}
+
+.tutorial-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.card-header {
+background: #5c3714;
+color: white;
+padding: 10px 12px;
+font-size: 12px;
+font-weight: 600;
+line-height: 1.2;
+min-height: 50px;
+display: flex;
+align-items: center;
+text-align: center;
+}
+
+.card-image {
+height: 140px;
+background: linear-gradient(135deg, #968cb5, #89838f);
+opacity: 0.7;
+margin: 12px;
+border-radius: 6px;
+}
+
+.detail-btn {
+width: 100%;
+padding: 10px;
+background: #f5deb3;
+border: none;
+color: #513318;
+font-weight: 600;
+font-size: 12px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.detail-btn:hover {
+background: #e6d199;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+.tutorial-grid {
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+gap: 14px;
+}
+}
+
+@media (max-width: 768px) {
+.tutorial-grid {
+grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+gap: 12px;
+padding: 0 15px;
+}
+
+.tutorial-card {
+min-width: 160px;
+max-width: 200px;
+}
+
+.card-image {
+height: 120px;
+}
+}
+
+@media (max-width: 480px) {
+.tutorial-grid {
+grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+gap: 10px;
+padding: 0 10px;
+}
+
+.tutorial-card {
+min-width: 140px;
+max-width: 180px;
+}
+}
+.pagination {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;
+margin-bottom: 60px;
+margin-left: 1100px;
+transform: scale(0.85);
+}
+
+.prev-btn,
+.next-btn {
+background: #1b5731;
+color: white;
+border: none;
+padding: 8px 16px;
+border-radius: 4px;
+cursor: pointer;
+font-weight: 600;
+font-size: 13px;
+transition: background-color 0.3s;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+background: #11612e;
+}
+
+.page-numbers {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.page-num {
+padding: 6px 10px;
+cursor: pointer;
+border-radius: 4px;
+font-size: 13px;
+transition: background-color 0.3s;
+}
+
+.page-num:hover {
+background: #f0f0f0;
+}
+
+.page-num.active {
+background: #19502d;
+color: white;
+font-weight: 600;
+}
+
+.page-dots {
+color: #999;
+padding: 0 4px;
+font-size: 13px;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+.tutorial-grid {
+grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (max-width: 768px) {
+.nav-menu {
+display: none;
+}
+
+.main-container {
+flex-direction: column;
+padding: 10px;
+}
+
+.sidebar {
+width: 100%;
+padding: 15px 0;
+}
+
+.category-menu {
+flex-direction: row;
+justify-content: space-around;
+padding: 0 10px;
+}
+
+.tutorial-grid {
+grid-template-columns: repeat(2, 1fr);
+gap: 15px;
+}
+
+
+
+@media (max-width: 480px) {
+.tutorial-grid {
+grid-template-columns: 1fr;
+}
+}
+}

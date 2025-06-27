@@ -1,0 +1,162 @@
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  padding: 3rem auto;
+}
+
+.accessory-background.arrow-right{
+    position: absolute;
+    top: -90px;
+    left: 100px;
+    width: 225px;
+    max-width: 20vw;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.accessory-background.arrow-left{
+    position: absolute;
+    bottom: -90px;
+    right: 120px;
+    width: 225px;
+    max-width: 20vw;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+
+
+/* Cloud Section */
+.cloud-section {
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+}
+
+/* Intro section */
+.about-intro {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-photo {
+  width: 300px;
+  border: 5px solid #237c64;
+  border-radius: 20px;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.hearts {
+  width: 80px;
+  margin-top: 1rem;
+}
+
+.about-hero {
+  background: url("{{ asset('images/about/about-bg.png') }}") no-repeat top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+}
+
+.slideshow-container {
+  margin: 30px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  display: none;
+  border-radius: 25px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide img {
+  width: 400px;
+  border-radius: 25px;
+}
+
+.active-slide {
+  display: block;
+}
+
+.dot-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #2e8264;
+}
+
+.text-section {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.text-section p {
+  font-size: 18px;
+  color: #333;
+}
+
+.text-section p strong {
+  color: #2e8264;
+}
+
+.visi-misi-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  gap: 100px;
+  padding: 0 40px;
+  padding-bottom: 100px;
+}
+
+.visi-misi-section{
+  position: relative;
+  gap: 200px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.visimisi-text{
+  letter-spacing: normal;
+  background-color: #7f6044;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 16px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.rocket-img {
+  width: 90px;
+  margin: 60px auto 0;
+}
