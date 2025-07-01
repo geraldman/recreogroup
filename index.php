@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="our-goals-block vertical">
+                <div class="our-goals-block vertical two">
                     <img src="img/vertical-2-picture.png" alt="">
                     <div class="text-wrap">
                         <p class="small bold">Recreate the world, beautifully</p>
@@ -101,11 +101,11 @@
                     <div class="accessory-background leaf">
                         <img class="accessory" src="img/background/leaf-background.png" alt="">
                     </div>
-                    <h2 class="green medium">Crafts Tutorial</h2>
+                    <h2 class="green">Crafts Tutorial</h2>
                 </div>
             </div>
             <div class="box-container">
-                <div class="box-frame">
+                <div class="box-frame one">
                     <div class="top-frame craft">
                         <p class="smaller bold">Pot tanaman dari botol plastik</p>
                     </div>
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box-frame">
+                <div class="box-frame two">
                     <div class="top-frame craft">
                         <p class="smaller bold">Lorem ipsum dolor, sit amet consectetur</p>
                     </div>
@@ -127,7 +127,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box-frame">
+                <div class="box-frame three">
                     <div class="top-frame craft">
                         <p class="smaller bold">Lorem ipsum dolor, sit amet consectetur</p>
                     </div>
@@ -138,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="box-frame">
+                <div class="box-frame four">
                     <div class="top-frame craft">
                         <p class="smaller bold">Lorem ipsum dolor, sit amet consectetur</p>
                     </div>
@@ -157,11 +157,11 @@
         <div class="created body-margin">
             <div class="h2-wrap">
                 <div class="h2-inline-wrap">
-                    <h2 class="green medium">See what they created</h2>
+                    <h2 class="green">See what they created</h2>
                 </div>
             </div>
             <div class="box-container">
-                <div class="box-frame">
+                <div class="box-frame one">
                     <div class="box-image-frame">
                         <img src="img/craft-picture-1.png" alt="">
                         <p class="smaller black">Pot Tanaman dari Botol Plastik</p>
@@ -170,19 +170,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="box-frame">
+                <div class="box-frame two">
                     <div class="box-image-frame">
                         <img src="img/craft-picture-2.png" alt="">
                         <p class="smaller black">Lampu tidur nya bagus</p>
                     </div>
                 </div>
-                <div class="box-frame">
+                <div class="box-frame three">
                     <div class="box-image-frame">
                         <img src="img/craft-picture-1.png" alt="">
                         <p class="smaller black">Dibuat dari barang bekas</p>
                     </div>
                 </div>
-                <div class="box-frame">
+                <div class="box-frame four">
                     <div class="box-image-frame">
                         <img src="img/craft-picture-2.png" alt="">
                         <p class="smaller black">Creative Parah</p>

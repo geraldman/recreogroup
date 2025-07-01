@@ -39,6 +39,7 @@ a{
     font-family: 'inter';
     color: black;
     font-weight:500;
+    font-size: 1rem;
 }
 
 h2{
@@ -55,6 +56,7 @@ h2.green{
     color: #2e8264;
     font-size: 60px;
     text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
+    line-height: normal;
 }
 
 h2.green.medium{
@@ -63,6 +65,7 @@ h2.green.medium{
     color: #2e8264;
     font-size: 40px;
     text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
+    line-height: normal;
 }
 
 h2.green.small{
@@ -252,7 +255,7 @@ label.smaller.bold{
 
 .hero-wrap{ 
     display: inline-flex;
-    margin-top: 120px;
+    margin-top: calc(8.333vw + 30px);
     height: max-content;
     gap: 50px;
 }
@@ -275,4 +278,55 @@ label.smaller.bold{
 .flex-column{
     display: flex;
     flex-direction: column;
+}
+
+@media(max-width: 1024px){
+    h2{
+        font-size: 40px;
+        line-height: 43px;
+    }
+    p{
+        font-size: 15px;
+    }
+    p.small.bold{
+        font-size: 2.241vw;
+        line-height: 2.437vw;
+    }
+
+    p.small{
+        font-size: 1.994vw;
+        line-height: 2.144vw;
+    }
+}
+
+@media(max-width: 768px){
+    p.small.bold{
+        font-size: 15px;
+        line-height: normal;
+    }
+
+    p.small{
+        font-size: 12px;
+        line-height: normal;
+    }
+}
+
+@media(max-width: 480px){
+    h2{
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    h2.green{
+        display: inline-block;
+        font-family: 'spartan-league';
+        color: #2e8264;
+        font-size: 40px;
+        text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
+        line-height: normal;
+    }
+
+    p{
+        font-size: 15px;
+    }
 }

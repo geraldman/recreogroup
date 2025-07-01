@@ -3,9 +3,8 @@ window.onscroll = function (){
     var currentScrollPos = window.pageYOffset;
     const navbarElement = document.querySelector(".navbar");
     const sideNavbarElement = document.querySelector(".sidebar");
+    const dropdownMenu = document.querySelector(".dropdown-content");
     // Handling if dropdown accidentally opened when scrolling
-    const dropdownContent = document.querySelector('.dropdown-content');
-    const isMobile = () => window.innerWidth < 992;
     
     if(prevScrollpos > currentScrollPos){
         navbarElement.style.top = "0";
@@ -18,9 +17,21 @@ window.onscroll = function (){
         if(sideNavbarElement != null){
             sideNavbarElement.classList.add("scrolled");
         }
-        if(isMobile()){
-            dropdownContent.classList.add('hidden');
+        if (dropdownMenu && dropdownMenu.classList.contains('active')) {
+            dropdownMenu.classList.remove('active');
         }
     }
     prevScrollpos = currentScrollPos;
 };
+
+document.addEventListener('DOMContentLoaded', function(){
+    const hamburgerButton = document.querySelector(".mobile-navbar img");
+    const dropdownMenu = document.querySelector(".dropdown-content");
+
+    if(hamburgerButton && dropdownMenu){
+        hamburgerButton.addEventListener('click', function(){
+            dropdownMenu.classList.toggle('active');
+        });
+    }
+});
+
