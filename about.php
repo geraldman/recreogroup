@@ -19,7 +19,7 @@
 
     <div class="body-margin about-hero">
         <div class="hero-wrap flex-column">
-            <h2 class="green medium">About Us</h2>
+            <h2 class="green">About Us</h2>
             <div class="slide active-slide">
                 <img src="img/group-photo.jpeg" alt="Slide 2">
             </div>
@@ -50,8 +50,8 @@
                     ingin tahu, rasa tanggung jawab, dan kepedulian mereka dengan cara yang menyenangkan dan mendidik.
                 </p>
             </div>
-            <div class="visi-misi-section">
-                <p class="visimisi-text small white" style="margin-right: 50px">
+            <div class="visi-misi-section two">
+                <p class="visimisi-text small white">
                     menciptakan lingkungan belajar yang menyenangkan, edukatif, dan ramah lingkungan, di mana anak-anak
                     dapat menyusun kembali barang bekas menjadi karya yang luar biasa sambil mengasah nilai
                     keberlanjutan sejak dini.

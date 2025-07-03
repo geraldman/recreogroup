@@ -106,7 +106,7 @@ p.small{
     font-family: 'arial-unicode-ms';
     letter-spacing: normal;
     color: #d9d9d9;
-    font-size: 16px;
+    font-size: 1.111vw;
 }
 
 p.small.white{
@@ -255,7 +255,7 @@ label.smaller.bold{
 
 .hero-wrap{ 
     display: inline-flex;
-    margin-top: calc(8.333vw + 30px);
+    margin-top: 100px;
     height: max-content;
     gap: 50px;
 }
@@ -281,6 +281,11 @@ label.smaller.bold{
 }
 
 @media(max-width: 1024px){
+
+    .hero-wrap{
+        margin-top: calc(8.333vw + 30px);
+    }
+
     h2{
         font-size: 40px;
         line-height: 43px;
