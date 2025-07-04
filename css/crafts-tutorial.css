@@ -466,11 +466,28 @@ padding: 0 10px;
 gap: 15px;
 }
 
-
+}
 
 @media (max-width: 480px) {
 .tutorial-grid {
 grid-template-columns: 1fr;
 }
+
+.search-input{
+    padding: 10px 10px 10px 45px;
+}
+
+.tutorial-card{
+    max-width: 225px;
+}
+
+.sidebar.mobile button{
+    width: 70px;
+    height: 70px;
+}
+
+.sidebar.mobile button img{
+    width: 27px;
+    height: 27px;
 }
 }
