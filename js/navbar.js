@@ -6,7 +6,7 @@ window.onscroll = function (){
     const dropdownMenu = document.querySelector(".dropdown-content");
     // Handling if dropdown accidentally opened when scrolling
     
-    if(prevScrollpos > currentScrollPos){
+    if(prevScrollpos > currentScrollPos || currentScrollPos === 0){
         navbarElement.style.top = "0";
         if(sideNavbarElement != null){
             sideNavbarElement.classList.remove("scrolled");

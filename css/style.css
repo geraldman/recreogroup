@@ -314,6 +314,10 @@ label.smaller.bold{
         font-size: 12px;
         line-height: normal;
     }
+
+    .visimisi-text.small.white{
+        font-size: 15px;
+    }
 }
 
 @media(max-width: 480px){

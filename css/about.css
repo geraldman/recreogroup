@@ -183,3 +183,20 @@ margin: 60px auto 0;
   gap: 20px;
 }
 }
+
+@media(max-width: 768px){
+  .hero-wrap{
+    gap: 40px;
+  }
+
+  .visi-misi-wrap{
+    margin-top: 50px;
+    gap: 50px;
+  }
+}
+
+@media(max-width: 480px){
+  .hero-wrap.flex-column{
+    margin-top: 90px;
+  }
+}

@@ -55,6 +55,8 @@
 
 
         <main class="content-area">
+            <h2 class="green">Crafts Tutorial</h2>
+            <p style="letter-spacing: 1.5px">Temukan apa yang ingin kamu buat!</p>
 
             <div class="search-container">
                 <div class="search-box">
@@ -63,6 +65,31 @@
                 </div>
             </div>
 
+            <div class="sidebar mobile">
+                <button class="category uploadBtn">
+                    +
+                </button>
+                <button class="category">
+                    <img src="img/elements/plastic.png" alt="Plastik">
+                    <p class="textcategory">Plastik</p>
+                </button>
+                <button class="category">
+                    <img src="img/elements/fabric.png" alt="Kain">
+                    <p class="textcategory">Kain</p>
+                </button>
+                <button class="category">
+                    <img src="img/elements/paper.png" alt="Kertas">
+                    <p class="textcategory">Kertas</p>
+                </button>
+                <button class="category">
+                    <img src="img/elements/wood.png" alt="Kayu">
+                    <p class="textcategory">Kayu</p>
+                </button>
+                <button class="category">
+                    <img src="img/elements/others.png" alt="Lainnya">
+                    <p class="textcategory">Lainnya</p>
+                </button>
+        </div>
 
             <div class="tutorial-grid">
 
@@ -154,6 +181,7 @@
                     </span>
                     <button class="next-btn">Next ▶</button>
                 </div> -->
+                
         </main>
 
 

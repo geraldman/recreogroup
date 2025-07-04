@@ -2,7 +2,7 @@
     display: inline-block;
     background-color: white;
     padding: 0.694vw 0;
-    box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0.347vw 0.208vw 0px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     position: fixed;
     top: 0px;
@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    line-height: normal;
 }
 
 .navbar-image{
@@ -56,6 +57,7 @@
 .navbar-button{
     align-self: center;
     text-align: center;
+    line-height: normal;
 }
 
 .mobile-navbar{

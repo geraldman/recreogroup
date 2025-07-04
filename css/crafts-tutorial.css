@@ -191,8 +191,8 @@ margin-bottom: 5px;
 width: auto;
 margin-left: var(--sidebar-width);
 flex: 1;
-padding: 0 80px;
-padding-top: 80px;
+padding: 0 5.556vw;
+padding-top: 120px;
 }
 
 .search-container {
@@ -294,6 +294,24 @@ transition: background-color 0.3s;
 background: #e6d199;
 }
 
+.sidebar.mobile{
+    height: auto;
+    width: 100%;
+    position: relative;
+    display: none;
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    background-color: inherit;
+    padding-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar.mobile button{
+    width: 90px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1200px) {
 .tutorial-grid {
@@ -316,6 +334,11 @@ max-width: 200px;
 
 .card-image {
 height: 120px;
+}
+
+.content-area{
+    width: 100%;
+    margin-left: 0;
 }
 }
 
@@ -399,9 +422,28 @@ grid-template-columns: repeat(3, 1fr);
 }
 }
 
+@media(max-width: 1024px){
+    .tutorial-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
 @media (max-width: 768px) {
 .nav-menu {
 display: none;
+}
+
+.content-area{
+    text-align: center;
+}
+
+.sidebar{
+    display: none;
+}
+
+.sidebar.mobile{
+    display: grid;
 }
 
 .main-container {
@@ -421,7 +463,6 @@ padding: 0 10px;
 }
 
 .tutorial-grid {
-grid-template-columns: repeat(2, 1fr);
 gap: 15px;
 }
 
