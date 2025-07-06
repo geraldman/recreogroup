@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReCreo Crafts Tutorial</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/creates.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <i class="fas fa-upload"></i>
+            <h2 class="green">Upload Crafts Tutorial Kamu</h2>
+        </div>
+
+        <div class="form-content">
+            <form id="tutorialForm">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nama_kamu">Nama kamu</label>
+                        <input type="text" id="nama_kamu" name="nama_kamu" placeholder="Nama kamu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="kategori_bahan">Kategori berdasarkan bahan</label>
+                        <select id="kategori_bahan" name="kategori_bahan" required>
+                            <option value="">Pilih kategori bahan</option>
+                            <option value="plastik">Plastik</option>
+                            <option value="kain">Kain</option>
+                            <option value="kertas">Kertas</option>
+                            <option value="kayu">Kayu</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="judul_kreasi">Tuliskan nama kreasi kamu!</label>
+                    <input type="text" id="judul_kreasi" name="judul_kreasi" placeholder="Berikan judul kreasi kamu"
+                        required>
+
+                </div>
+
+                <!-- Judul Kreasi -->
+                <div class="form-group full-width">
+                    <label for="judul_kreasi">Deskripsi Kreasi</label>
+                    <textarea type="text" id="deskripsi_kreasi" name="deskripsi_kreasi" placeholder="Berikam deskripsi kreasi kamu"
+                        required></textarea>
+                </div>
+
+                <div id="upload-container">
+                    <div class="upload-section">
+                        <div class="upload-group">
+                            <h5 class="upload-title">Upload hasil kreasi kamu</h5>
+                            <div class="upload-area" id="mainUploadArea">
+                                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                                <p class="upload-text">Unggah 1 foto (format: png/jpeg/jpg)</p>
+                                <input type="file" id="hasil_foto" name="hasil_foto" accept="image/*"
+                                    style="display: none;" required>
+                            </div>
+                        </div>
+                        <div class="content-group">
+                            <h5 class="content-title">Bahan dan alat yang dibutuhkan :</h5>
+                            <div class="textarea-container">
+                                <textarea id="bahan_alat" name="bahan_alat"
+                                    placeholder="Contoh:&#10;- 1 buah kardus ukuran sedang&#10;- Gunting dan cutter&#10;- Lem tembak atau lem putih&#10;- Kertas warna atau cat akrilik"
+                                    required>
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="upload-content-button">
+                    <button type="button" id="addStep">Add new step</button> 
+                    <button type="button" id="deleteStep">Delete latest step</button>
+                </div>
+                <div class="form-actions">
+                    <button id="resetBtn">
+                        Kembali
+                    </button>
+                    <button type="submit" class="btn-submit">
+                        Bagikan sekarang
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/creates.js"></script>
+</body>
+
+</html>
