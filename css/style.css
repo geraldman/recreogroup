@@ -59,6 +59,11 @@ h2.green{
     line-height: normal;
 }
 
+h2.green.medium.inverted{
+    color: white;
+}
+
+
 h2.green.medium{
     display: inline-block;
     font-family: 'spartan-league';
@@ -152,7 +157,7 @@ p.textcategory.white{
     color: white;
 }
 
-label.smaller.bold{
+label.smaller.bold, #tutorialForm label{
     color: black;
     font-size: 15px;
     font-family: 'arial-unicode-ms-bold';
@@ -280,6 +285,52 @@ label.smaller.bold{
     flex-direction: column;
 }
 
+.upload-content-button button, .form-actions button{
+    padding: 12px 24px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    color: white;
+    font-weight: 600;
+    opacity: 1;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.upload-content-button button:disabled, .form-actions button:disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+button[id="addStep"]{
+    background-color:#2e8264;
+}
+
+button[id="addStep"]:hover{
+    background-color:white;
+    border: 1px solid #2E8264;
+    color: #2E8264;
+}
+
+button[id="deleteStep"]{
+    background-color: grey;
+}
+
+button[id="deleteStep"]:hover{
+    color: grey;
+    border: 1px solid grey;
+    background-color: white;
+}
+
+button[id="resetBtn"]{
+    background-color: #df0004;
+}
+
+button[id="resetBtn"]:hover{
+    color: #df0004;
+    border: 1px solid #df0004;
+    background-color: white;
+}
+
 @media(max-width: 1024px){
 
     .hero-wrap{
@@ -333,6 +384,10 @@ label.smaller.bold{
         font-size: 40px;
         text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
         line-height: normal;
+    }
+
+    h2.green.medium.inverted{
+        font-size: 30px;
     }
 
     p{

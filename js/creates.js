@@ -26,7 +26,8 @@ function createInstructions(stepNumber){
             <h5 class="upload-title">Upload tutorial foto langkah ke-${stepNumber}</h5>
             <div class="upload-area">
                 <i class="fas fa-cloud-upload-alt upload-icon"></i>
-                <p class="upload-text">Unggah maksimal 10 file (format: png/jpeg/jpg)</p>
+                <p class="upload-text">Unggah maksimal 1
+                 file (format: png/jpeg/jpg)</p>
                 <input type="file" id="${fileInputId}" name="${fileInputId}" accept="image/*"
                     multiple style="display: none;" required>
                 </div>
@@ -129,4 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
     generateFirstInstructions();
     updateStepNumbers();
 }); 
+
+
 

@@ -7,13 +7,19 @@
     <title>ReCreo Crafts Tutorial</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/creates.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/navbar.js"></script>
 </head>
 
 <body>
+
+    <?php include "navbar.html"?>
+
     <div class="main-container">
         <div class="header">
             <i class="fas fa-upload"></i>
-            <h2 class="green">Upload Crafts Tutorial Kamu</h2>
+            <h2 class="green medium inverted">Upload Crafts Tutorial Kamu</h2>
         </div>
 
         <div class="form-content">
@@ -79,7 +85,7 @@
                 </div>
                 <div class="form-actions">
                     <button id="resetBtn">
-                        Kembali
+                        Reset
                     </button>
                     <button type="submit" class="btn-submit">
                         Bagikan sekarang

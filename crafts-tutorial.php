@@ -26,7 +26,7 @@
             <div class="categories">
                 <div class="upload-category">
                     <p class="textcategory white">Upload</p>
-                    <button class="category uploadBtn">
+                    <button class="category uploadBtn" onclick=creates()>
                         +
                     </button>
                 </div>
@@ -66,7 +66,7 @@
             </div>
 
             <div class="sidebar mobile">
-                <button class="category uploadBtn">
+                <button class="category uploadBtn" onclick=creates()>
                     +
                 </button>
                 <button class="category">
@@ -183,9 +183,11 @@
                 </div> -->
                 
         </main>
-
-
         <script src="../js/script.js"></script>
+        <script>
+            function creates(){
+                location.replace("creates.php");
+            }
+        </script>
 </body>
-
 </html>
