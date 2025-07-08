@@ -42,6 +42,30 @@ a{
     font-size: 1rem;
 }
 
+a.box-button{
+    width: 100%;
+    text-align: center;
+    background-color: #2E8264;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+a.box-button:hover{
+    color: #2E8264;
+    background-color: white;
+    border: 1px solid #2E8264;
+}
+
+h3{
+    font-family: 'spartan-league';
+    font-weight: 575;
+    color: black;
+}
+
 h2{
     font-family: 'spartan-league';
     color: #535c3c;
@@ -88,6 +112,11 @@ p{
     letter-spacing: 3px;
 }
 
+p.upload-text{
+    letter-spacing: 1.5px;
+    line-height: normal;
+}
+
 p.bold.black{
     font-size: 14px;
     font-weight: bold;
@@ -116,6 +145,12 @@ p.small{
 
 p.small.white{
     color: white;
+}
+
+p.small.light.black{
+    font-family: 'spartan-league';
+    font-weight: normal;
+    font-size: 15px;
 }
 
 p.smaller, label{

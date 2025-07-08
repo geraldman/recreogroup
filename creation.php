@@ -55,8 +55,8 @@
 
 
         <main class="content-area">
-            <h2 class="green">Crafts Tutorial</h2>
-            <p style="letter-spacing: 1.5px">Temukan apa yang ingin kamu buat!</p>
+            <h2 class="green">Creations</h2>
+            <p style="letter-spacing: 1.5px">Lorem ipsum    </p>
 
             <div class="search-container">
                 <div class="search-box">
@@ -93,52 +93,118 @@
 
             <div class="tutorial-grid">
 
-                <div class="box-frame">
+                <div class="box-frame one">
                     <div class="box-image-frame">
                         <img src="img/craft-picture-1.png" alt="">
+                        <div class="action-buttons">
+                            <div class="likes-section">
+                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
+                            </div>
+                            <div class="options-dropdown">
+                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
+                            </div>
+                        </div>
                     </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                    <a href="#" class="box-button">Lihat ide ini</a>
+                    <div class="box-text-frame">
+                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
+                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
+                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
+                    </div>
                 </div>
 
-                <div class="box-frame">
+                <div class="box-frame one">
                     <div class="box-image-frame">
                         <img src="img/craft-picture-1.png" alt="">
+                        <div class="action-buttons">
+                            <div class="likes-section">
+                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
+                            </div>
+                            <div class="options-dropdown">
+                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
+                            </div>
+                        </div>
                     </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                    <a href="#" class="box-button">Lihat ide ini</a>
+                    <div class="box-text-frame">
+                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
+                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
+                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
+                    </div>
                 </div>
 
-                <div class="box-frame">
+                <div class="box-frame one">
                     <div class="box-image-frame">
                         <img src="img/craft-picture-1.png" alt="">
+                        <div class="action-buttons">
+                            <div class="likes-section">
+                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
+                            </div>
+                            <div class="options-dropdown">
+                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
+                            </div>
+                        </div>
                     </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                    <a href="#" class="box-button">Lihat ide ini</a>
+                    <div class="box-text-frame">
+                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
+                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
+                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
+                    </div>
                 </div>
 
-                <div class="box-frame">
+                <div class="box-frame one">
                     <div class="box-image-frame">
                         <img src="img/craft-picture-1.png" alt="">
+                        <div class="action-buttons">
+                            <div class="likes-section">
+                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
+                            </div>
+                            <div class="options-dropdown">
+                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
+                            </div>
+                        </div>
                     </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                    <a href="#" class="box-button">Lihat ide ini</a>
+                    <div class="box-text-frame">
+                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
+                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
+                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
+                    </div>
                 </div>
 
-                <div class="box-frame">
+                <div class="box-frame one">
                     <div class="box-image-frame">
                         <img src="img/craft-picture-1.png" alt="">
+                        <div class="action-buttons">
+                            <div class="likes-section">
+                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
+                            </div>
+                            <div class="options-dropdown">
+                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
+                            </div>
+                        </div>
                     </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                    <a href="#" class="box-button">Lihat ide ini</a>
+                    <div class="box-text-frame">
+                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
+                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
+                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
+                    </div>
                 </div>
 
-                <div class="box-frame">
+                <div class="box-frame one">
                     <div class="box-image-frame">
                         <img src="img/craft-picture-1.png" alt="">
+                        <div class="action-buttons">
+                            <div class="likes-section">
+                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
+                            </div>
+                            <div class="options-dropdown">
+                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
+                            </div>
+                        </div>
                     </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                    <a href="#" class="box-button">Lihat ide ini</a>
+                    <div class="box-text-frame">
+                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
+                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
+                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
+                    </div>
                 </div>
 
                 <!-- Pagination -->
