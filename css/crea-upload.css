@@ -198,6 +198,7 @@ select option {
 
 .upload-section {
     flex: 1;
+    flex-direction: column;
 }
 
 .upload-section h3 {

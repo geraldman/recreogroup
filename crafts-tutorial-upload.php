@@ -23,7 +23,7 @@
         </div>
 
         <div class="form-content">
-            <form id="tutorialForm">
+            <form id="tutorialForm" action="" method="post">
 
                 <div class="form-row">
                     <div class="form-group">

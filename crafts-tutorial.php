@@ -13,12 +13,11 @@
     <link rel="stylesheet" href="../css/about.css">
     <script src="js/navbar.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/sidebar.js"></script>
 </head>
 
 <body>
 
-    <?php include 'navbar.html'; ?>
+    <?php include 'navbar.html'?>
 
     <div class="content">
 
@@ -30,23 +29,23 @@
                         +
                     </button>
                 </div>
-                <button class="category">
+                <button class="category" onclick=categoryRedirect(1)>
                     <img src="img/elements/plastic.png" alt="Plastik">
                     <p class="textcategory">Plastik</p>
                 </button>
-                <button class="category">
+                <button class="category" onclick=categoryRedirect(2)>
                     <img src="img/elements/fabric.png" alt="Kain">
                     <p class="textcategory">Kain</p>
                 </button>
-                <button class="category">
+                <button class="category" onclick=categoryRedirect(3)>
                     <img src="img/elements/paper.png" alt="Kertas">
                     <p class="textcategory">Kertas</p>
                 </button>
-                <button class="category">
+                <button class="category" onclick=categoryRedirect(4)>
                     <img src="img/elements/wood.png" alt="Kayu">
                     <p class="textcategory">Kayu</p>
                 </button>
-                <button class="category">
+                <button class="category" onclick=categoryRedirect(5)>
                     <img src="img/elements/others.png" alt="Lainnya">
                     <p class="textcategory">Lainnya</p>
                 </button>
@@ -69,96 +68,36 @@
                 <button class="category uploadBtn" onclick=creates()>
                     +
                 </button>
-                <button class="category">
+                <button class="category" onclick=categoryRedirect(1)>
                     <img src="img/elements/plastic.png" alt="Plastik">
                     <p class="textcategory">Plastik</p>
                 </button>
-                <button class="category">
+                <button class="category" onclick=categoryRedirect(2)>
                     <img src="img/elements/fabric.png" alt="Kain">
                     <p class="textcategory">Kain</p>
                 </button>
-                <button class="category">
+                <button class="category" onclick=categoryRedirect(3)>
                     <img src="img/elements/paper.png" alt="Kertas">
                     <p class="textcategory">Kertas</p>
                 </button>
-                <button class="category">
+                <button class="category" onclick=categoryRedirect(4)>
                     <img src="img/elements/wood.png" alt="Kayu">
                     <p class="textcategory">Kayu</p>
                 </button>
-                <button class="category">
+                <button class="category" onclick=categoryRedirect(5)>
                     <img src="img/elements/others.png" alt="Lainnya">
                     <p class="textcategory">Lainnya</p>
                 </button>
         </div>
-
-            <div class="tutorial-grid">
-
-                <div class="box-frame">
-                    <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
-                    </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                    <a href="#" class="box-button">Lihat ide ini</a>
-                </div>
-
-                <div class="box-frame">
-                    <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
-                    </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                    <a href="#" class="box-button">Lihat ide ini</a>
-                </div>
-
-                <div class="box-frame">
-                    <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
-                    </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                    <a href="#" class="box-button">Lihat ide ini</a>
-                </div>
-
-                <div class="box-frame">
-                    <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
-                    </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                    <a href="#" class="box-button">Lihat ide ini</a>
-                </div>
-
-                <div class="box-frame">
-                    <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
-                    </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                    <a href="#" class="box-button">Lihat ide ini</a>
-                </div>
-
-                <div class="box-frame">
-                    <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
-                    </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                    <a href="#" class="box-button">Lihat ide ini</a>
-                </div>
-
-                <!-- Pagination -->
-                <!-- <div class="pagination">
-                    <button class="prev-btn">◀ Prev</button>
-                    <span class="page-numbers">
-                        <span class="page-num">1</span>
-                        <span class="page-num">2</span>
-                        <span class="page-num active">3</span>
-                        <span class="page-dots">...</span>
-                        <span class="page-num">25</span>
-                    </span>
-                    <button class="next-btn">Next ▶</button>
-                </div> -->
-                
+            <?php include 'tutorial-grid-crafts.php'?>
         </main>
-        <script src="../js/script.js"></script>
+        <!-- <script src="../js/script.js"></script> -->
         <script>
             function creates(){
                 location.replace("crafts-tutorial-upload.php");
+            }
+            function categoryRedirect(id){
+                location.replace("crafts-tutorial.php?category=" + arguments[0]);
             }
         </script>
 </body>

@@ -192,7 +192,7 @@ p.textcategory.white{
     color: white;
 }
 
-label.smaller.bold, #tutorialForm label{
+label.smaller.bold, #tutorialForm label, #uploadForm label{
     color: black;
     font-size: 15px;
     font-family: 'arial-unicode-ms-bold';
