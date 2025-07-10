@@ -25,9 +25,11 @@ class DBConn{
             $this->conn = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
             error_log("Connection to database is successful");
             echo "Hello";
+            return 1;
         }
         catch(PDOException $e){
             $this->connection_successful = false;
+            return 0;
         }
     }
 
@@ -35,7 +37,7 @@ class DBConn{
         $this->conn = null;
     }
 
-    public function uploadCraftsTutorial($name, $title, $description, $email){
+    public function uploadCraftsTutorial($name, $title, $description, $email = "none"){
         $sql = "INSERT INTO tutorials(tutor_name, tutor_title, tutor_description, tutor_email)
         values (?, ?, ?, ?)";
         $result = $this->conn->prepare($sql);

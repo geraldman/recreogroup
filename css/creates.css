@@ -70,6 +70,14 @@ body {
     margin-bottom: 25px;
 }
 
+.form-group.success input{
+    border-color: #2E8264;
+}
+
+.form-group.error input{
+    border-color: red;
+}
+
 label {
     display: block;
     font-weight: bold;
@@ -292,7 +300,7 @@ textarea {
     background-color: #ff5252;
 }
 
-.btn-submit {
+.btn-submit, .verifyBtn {
     background-color: #295832;
     color: white;
     border: none;
@@ -303,7 +311,7 @@ textarea {
     transition: background-color 0.3s ease;
 }
 
-.btn-submit:hover {
+.btn-submit:hover, .verifyBtn:hover {
     border: 1px solid #295832;
     background-color: white;
     color: #295832;

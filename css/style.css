@@ -346,11 +346,11 @@ button[id="addStep"]:hover{
     color: #2E8264;
 }
 
-button[id="deleteStep"]{
+button[id="deleteStep"], button[id="generateCodeBtn"]{
     background-color: grey;
 }
 
-button[id="deleteStep"]:hover{
+button[id="deleteStep"]:hover, button[id="generateCodeBtn"]:hover{
     color: grey;
     border: 1px solid grey;
     background-color: white;

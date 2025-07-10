@@ -1,3 +1,13 @@
+<?php
+    if(isset($_POST["submit"])){
+        session_start(); // Session initialization
+        error_log("Session starts");
+        $_SESSION['POST'] = $_POST;
+        $_SESSION['HEAD'] = "crafts-tutorial-upload.php";
+        session_end();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +26,9 @@
 
     <?php include "navbar.html"?>
 
+    <div class=overlay>
+
+    </div>
     <div class="main-container">
         <div class="header">
             <i class="fas fa-upload"></i>
@@ -23,23 +36,25 @@
         </div>
 
         <div class="form-content">
-            <form id="tutorialForm" action="" method="post">
+            <form id="tutorialForm" enctype="multipart/form-data" action="" method="post">
 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="nama_kamu">Nama kamu</label>
                         <input type="text" id="nama_kamu" name="nama_kamu" placeholder="Nama kamu" required>
+                        <div class="error"></div>
                     </div>
                     <div class="form-group">
                         <label for="kategori_bahan">Kategori berdasarkan bahan</label>
                         <select id="kategori_bahan" name="kategori_bahan" required>
                             <option value="">Pilih kategori bahan</option>
-                            <option value="plastik">Plastik</option>
-                            <option value="kain">Kain</option>
-                            <option value="kertas">Kertas</option>
-                            <option value="kayu">Kayu</option>
-                            <option value="lainnya">Lainnya</option>
+                            <option value="Plastik">Plastik</option>
+                            <option value="Kain">Kain</option>
+                            <option value="Kertas">Kertas</option>
+                            <option value="Kayu">Kayu</option>
+                            <option value="Lainnya">Lainnya</option>
                         </select>
+                        <div class="error"></div>
                     </div>
                 </div>
 
@@ -47,37 +62,40 @@
                     <label for="judul_kreasi">Tuliskan nama kreasi kamu!</label>
                     <input type="text" id="judul_kreasi" name="judul_kreasi" placeholder="Berikan judul kreasi kamu"
                         required>
-
+                    <div class="error"></div>
                 </div>
 
                 <!-- Judul Kreasi -->
                 <div class="form-group full-width">
-                    <label for="judul_kreasi">Deskripsi Kreasi</label>
+                    <label for="deskripsi_kreasi">Deskripsi Kreasi</label>
                     <textarea type="text" id="deskripsi_kreasi" name="deskripsi_kreasi" placeholder="Berikam deskripsi kreasi kamu"
                         required></textarea>
+                    <div class="error"></div>
+                </div>
+
+                <div class="upload-section">
+                    <div class="upload-group">
+                        <h5 class="upload-title">Upload hasil kreasi kamu</h5>
+                        <div class="upload-area" id="initialUploadArea">
+                            <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                            <p class="upload-text">Unggah maksimal 1 file (format: png/jpeg/jpg)</p>
+                            <input type="file" id="hasil_foto" name="hasil_foto" accept="image/*"
+                                style="display: none;" required>
+                        </div>
+                    </div>
+                    <div class="content-group">
+                        <h5 class="content-title">Bahan dan alat yang dibutuhkan :</h5>
+                        <div class="textarea-container">
+                            <textarea id="bahan_alat" name="bahan_alat"
+                                placeholder="-1 buah kardus ukuran sedang&#10;- Gunting dan cutter&#10;- Lem tembak atau lem putih&#10;- Kertas warna atau cat akrilik"
+                                required>
+                            </textarea>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="upload-container">
-                    <div class="upload-section">
-                        <div class="upload-group">
-                            <h5 class="upload-title">Upload hasil kreasi kamu</h5>
-                            <div class="upload-area" id="mainUploadArea">
-                                <i class="fas fa-cloud-upload-alt upload-icon"></i>
-                                <p class="upload-text">Unggah 1 foto (format: png/jpeg/jpg)</p>
-                                <input type="file" id="hasil_foto" name="hasil_foto" accept="image/*"
-                                    style="display: none;" required>
-                            </div>
-                        </div>
-                        <div class="content-group">
-                            <h5 class="content-title">Bahan dan alat yang dibutuhkan :</h5>
-                            <div class="textarea-container">
-                                <textarea id="bahan_alat" name="bahan_alat"
-                                    placeholder="Contoh:&#10;- 1 buah kardus ukuran sedang&#10;- Gunting dan cutter&#10;- Lem tembak atau lem putih&#10;- Kertas warna atau cat akrilik"
-                                    required>
-                                </textarea>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- This is where all the picture input is generated by Javascript -->
                 </div>
                 <div class="upload-content-button">
                     <button type="button" id="addStep">Add new step</button> 
@@ -87,14 +105,13 @@
                     <button id="resetBtn">
                         Reset
                     </button>
-                    <button type="submit" class="btn-submit">
+                    <button type="submit" class="btn-submit" id="btn-submit-data">
                         Bagikan sekarang
                     </button>
                 </div>
             </form>
         </div>
     </div>
-
     <script src="js/creates.js"></script>
 </body>
 

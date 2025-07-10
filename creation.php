@@ -224,7 +224,7 @@
         <script src="../js/script.js"></script>
         <script>
             function creates(){
-                location.replace("crafts-tutorial-upload.php");
+                location.replace("creations-upload.php");
             }
         </script>
 </body>

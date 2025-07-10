@@ -1,8 +1,19 @@
-document.getElementById('hasil_foto').addEventListener('change', function(e) {
+// Initial upload area elements
+const mainUploadAreaContainer = document.getElementById("initialUploadArea"); // This is the div with class 'upload-area'
+const mainFileInput = document.getElementById('hasil_foto');
+const mainUploadText = mainUploadAreaContainer.querySelector('.upload-text');
+
+// Event listener for the initial upload area (hasil_foto)
+mainUploadAreaContainer.addEventListener('click', () => {
+    mainFileInput.click();
+});
+
+mainFileInput.addEventListener('change', function(e) {
     if (e.target.files.length > 0) {
         const fileName = e.target.files[0].name;
-        const uploadArea = e.target.parentElement;
-        uploadArea.querySelector('.upload-text').textContent = `File dipilih: ${fileName}`;
+        mainUploadText.textContent = `File dipilih: ${fileName}`;
+    } else {
+        mainUploadText.textContent = `Unggah maksimal 1 file (format: png/jpeg/jpg)`; // Reset if no file is selected
     }
 });
 

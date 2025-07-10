@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div class="content-group">
-                            <h5 class="content-title">Bahan dan alat yang dibutuhkan :</h5>
+                            <h5 class="content-title">Deskripsikan apa yang kamu buat</h5>
                             <div class="textarea-container">
                                 <textarea id="bahan_alat" name="bahan_alat"
                                     placeholder="Lampu meja minimalis ini menghadirkan nuansa hangat dan modern ke ruang kerja atau kamar tidur. Dengan desain elegan dan sentuhan kayu alami, lampu ini cocok untuk suasana produktif maupun relaksasi. Dilengkapi fitur pencahayaan LED hemat energi dan leher fleksibel untuk pencahayaan maksimal."
