@@ -15,6 +15,7 @@
     $conn = new DBConn();
     if($conn == 0){
         header("Location: crafts-tutorial-upload.php?upload=failed");
+        exit;
     }
     
     // Submitting general description

@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/creates.css">
         <link rel="stylesheet" href="css/authenticate.css">
+        <script src="js/authenticate.js"></script>
     </head>
     <body class="auth-margin">
         <form id="authForm" action="" method="post" enctype="multipart/form-data">
@@ -25,12 +26,13 @@
             </div>
             <div class="form-actions" style="padding-top: 0;">
                 <button id="generateCodeBtn">Generate Code</button>
-                <button type="submit" class="verifyBtn">Verify</button>
+                <button type="submit" class="verifyBtn" id="verifyBtn">Verify</button>
             </div>
             <!-- <div id="statusMessage" class="auth-error" style="text-align: center;font-size: 0.9em;">Test</div> -->
             <div class="auth-small-textbox">
                 <a href="#">Go Back</a>
             </div>
+            <div class="auth-error" id="authMessage" style="text-align:center;"></div>
         </form>
     </body>
 </html>
