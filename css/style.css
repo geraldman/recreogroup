@@ -105,6 +105,36 @@ h2.green.smaller{
     font-size: 30px;
 }
 
+p.username{
+    color: rgba(103, 54, 11, 0.6);
+    letter-spacing: normal; 
+}
+
+p.username.big{
+    font-weight: 500;
+}
+
+p.username.small{
+    font-size: 17px;
+    color: rgba(81, 57, 49, 0.7);
+}
+
+.content-left-side p, .instruction-description p{
+    color: rgba(103, 54, 11, 1);
+}
+
+p.waste-category{
+    font-size: 15px;
+    padding: 0 15px;
+    color: #2E8264;
+    letter-spacing: normal;
+    border: 1px solid #2E8264;
+    background-color: #D8FCD3;
+    width: fit-content;
+    border-radius: 8px;
+    text-transform: capitalize;
+}
+
 p{
     font-family: 'inter';
     color: #641919;
@@ -320,7 +350,7 @@ label.smaller.bold, #tutorialForm label, #uploadForm label{
     flex-direction: column;
 }
 
-.upload-content-button button, .form-actions button{
+.upload-content-button button, .form-actions button, .overlay-action-buttons button{
     padding: 12px 24px;
     border-radius: 15px;
     border: 1px solid transparent;
@@ -336,21 +366,21 @@ label.smaller.bold, #tutorialForm label, #uploadForm label{
     pointer-events: none;
 }
 
-button[id="addStep"]{
+button[id="addStep"], button[id="nextStep"]{
     background-color:#2e8264;
 }
 
-button[id="addStep"]:hover{
+button[id="addStep"]:hover, button[id="nextStep"]:hover{
     background-color:white;
     border: 1px solid #2E8264;
     color: #2E8264;
 }
 
-button[id="deleteStep"], button[id="generateCodeBtn"]{
+button[id="deleteStep"], button[id="generateCodeBtn"], button[id="previousStep"]{
     background-color: grey;
 }
 
-button[id="deleteStep"]:hover, button[id="generateCodeBtn"]:hover{
+button[id="deleteStep"]:hover, button[id="generateCodeBtn"]:hover, button[id="previousStep"]:hover{
     color: grey;
     border: 1px solid grey;
     background-color: white;

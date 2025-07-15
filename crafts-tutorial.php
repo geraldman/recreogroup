@@ -1,3 +1,9 @@
+<?php
+    // if(isset($_GET['category'])){
+
+    // }
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -13,14 +19,58 @@
     <link rel="stylesheet" href="../css/about.css">
     <script src="js/navbar.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/crafts-tutorial.js"></script>
 </head>
 
 <body>
-
+    <div class="overlay">
+        <div class="overlay-container">
+            <div class="overlay-menubar">
+                <button>X</button>
+            </div>
+            <div class="overlay-content">
+                <div class="upper-overlay-content">
+                    <div class="left-overlay">
+                        <img src="img/craft-picture-1.png" alt="">
+                        <p class="waste-category plastik">plastik</p>
+                    </div>
+                    <div class="right-overlay">
+                        <div class="overlay-menubar-right">
+                            <div class="menubar-left-side">
+                                <img src="img/elements/iconamoon_profile-circle-fill.png"> 
+                                <p class="username big">Anjelin</p>
+                            </div>
+                            <p class="username small">2 weeks ago</p>
+                        </div>
+                        <div class="content-left-side">
+                            <p class="username big">Cara membuat lampu dari botol bekas anti ribet</p>
+                            <p class="username small">Lampu meja minimalis ini menghadirkan nuansa hangat dan modern ke ruang kerja atau kamar tidur. Dengan desain elegan dan sentuhan kayu alami, lampu ini cocok untuk suasana produktif maupun relaksasi. Dilengkapi fitur pencahayaan LED hemat energi dan leher fleksibel untuk pencahayaan maksimal.
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad tempora eius explicabo, officiis rerum perferendis similique id optio suscipit, eveniet magni iusto at necessitatibus! Fugit, nesciunt. Culpa quod quaerat sed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay-instruction">
+                    <div class="instruction-carousel" id="instruction-carousel">
+                        <img class="instruction active" src="img/craft-picture-1.png" alt="">
+                        <img class="instruction" src="img/craft-picture-2.png" alt="">
+                        <img class="instruction" src="img/vertical-1-picture.png" alt="">
+                    </div>
+                    <div class="instruction-description">
+                        <p class="username big" id="instruction-step">Step 1</p>
+                        <p class="username small" id="instruction-description">Lampu meja minimalis ini menghadirkan nuansa hangat dan modern ke ruang kerja atau kamar tidur. Dengan desain elegan dan sentuhan kayu alami, lampu ini cocok untuk suasana produktif maupun relaksasi. Dilengkapi fitur pencahayaan LED hemat energi dan leher fleksibel untuk pencahayaan maksimal.</p>
+                    </div>
+                </div>
+                <div class="overlay-action-buttons">
+                    <button id="previousStep" onclick=changeStep(-1)>Previous</button>
+                    <button id="nextStep" onclick=changeStep(1)>Next</button>
+                </div>  
+            </div>
+        </div>
+    </div>
     <?php include 'navbar.html'?>
 
     <div class="content">
-
         <div class="sidebar">
             <div class="categories">
                 <div class="upload-category">
