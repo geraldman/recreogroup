@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="../css/about.css">
     <script src="js/navbar.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/crafts-tutorial.js"></script>
 </head>
 
 <body>
@@ -55,18 +54,20 @@
                         <img class="instruction active" src="img/craft-picture-1.png" alt="">
                         <img class="instruction" src="img/craft-picture-2.png" alt="">
                         <img class="instruction" src="img/vertical-1-picture.png" alt="">
+                        <img class="instruction" src="img/vertical-2-picture.png" alt="">
                     </div>
                     <div class="instruction-description">
-                        <p class="username big" id="instruction-step">Step 1</p>
-                        <p class="username small" id="instruction-description">Lampu meja minimalis ini menghadirkan nuansa hangat dan modern ke ruang kerja atau kamar tidur. Dengan desain elegan dan sentuhan kayu alami, lampu ini cocok untuk suasana produktif maupun relaksasi. Dilengkapi fitur pencahayaan LED hemat energi dan leher fleksibel untuk pencahayaan maksimal.</p>
+                        <p class="username big" id="instruction-step"></p>
+                        <p class="username small" id="instruction-description"></p>
                     </div>
                 </div>
                 <div class="overlay-action-buttons">
-                    <button id="previousStep" onclick=changeStep(-1)>Previous</button>
-                    <button id="nextStep" onclick=changeStep(1)>Next</button>
+                    <button id="previousStep">Previous</button>
+                    <button id="nextStep">Next</button>
                 </div>  
             </div>
         </div>
+        <script src="js/crafts-tutorial.js"></script>
     </div>
     <?php include 'navbar.html'?>
 

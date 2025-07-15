@@ -361,7 +361,7 @@ label.smaller.bold, #tutorialForm label, #uploadForm label{
     font-size: 15px;
 }
 
-.upload-content-button button:disabled, .form-actions button:disabled{
+.upload-content-button button:disabled, .form-actions button:disabled, .overlay-action-buttons button:disabled{
     opacity: 0.5;
     pointer-events: none;
 }
