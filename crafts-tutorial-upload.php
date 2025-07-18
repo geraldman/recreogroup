@@ -4,7 +4,7 @@
         error_log("Session starts");
         $_SESSION['POST'] = $_POST;
         $_SESSION['HEAD'] = "crafts-tutorial-upload.php";
-        session_end();
+        header("Location: crafts-process.php"); 
     }
 ?>
 

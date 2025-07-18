@@ -1,7 +1,6 @@
-<?php
-    // if(isset($_GET['category'])){
-
-    // }
+<?php 
+include 'config.php';
+// $conn = new DBConn();
 ?>
 
 <!DOCTYPE html>
@@ -22,54 +21,63 @@
 </head>
 
 <body>
-    <div class="overlay">
-        <div class="overlay-container">
-            <div class="overlay-menubar">
-                <button>X</button>
-            </div>
-            <div class="overlay-content">
-                <div class="upper-overlay-content">
-                    <div class="left-overlay">
-                        <img src="img/craft-picture-1.png" alt="">
-                        <p class="waste-category plastik">plastik</p>
-                    </div>
-                    <div class="right-overlay">
-                        <div class="overlay-menubar-right">
-                            <div class="menubar-left-side">
-                                <img src="img/elements/iconamoon_profile-circle-fill.png"> 
-                                <p class="username big">Anjelin</p>
+    <?php
+        if(isset($_GET["id"])){
+        print '<div class="overlay">
+            <div class="overlay-container">
+                <div class="overlay-menubar">
+                    <button id="overlay-exit" onclick=locationHeader()>X</button>
+                </div>
+                <div class="overlay-content">
+                    <div class="upper-overlay-content">
+                        <div class="left-overlay">
+                            <img src="img/craft-picture-1.png" alt="">
+                            <p class="waste-category plastik">plastik</p>
+                        </div>
+                        <div class="right-overlay">
+                            <div class="overlay-menubar-right">
+                                <div class="menubar-left-side">
+                                    <img src="img/elements/iconamoon_profile-circle-fill.png">
+                                    <p class="username big">Anjelin</p>
+                                </div>
+                                <p class="username small">2 weeks ago</p>
                             </div>
-                            <p class="username small">2 weeks ago</p>
+                            <div class="content-left-side">
+                                <p class="username big">Cara membuat lampu dari botol bekas anti ribet</p>
+                                <p class="username small">Lampu meja minimalis ini menghadirkan nuansa hangat dan modern ke
+                                    ruang kerja atau kamar tidur. Dengan desain elegan dan sentuhan kayu alami, lampu ini
+                                    cocok untuk suasana produktif maupun relaksasi. Dilengkapi fitur pencahayaan LED hemat
+                                    energi dan leher fleksibel untuk pencahayaan maksimal.
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad tempora eius explicabo,
+                                    officiis rerum perferendis similique id optio suscipit, eveniet magni iusto at
+                                    necessitatibus! Fugit, nesciunt. Culpa quod quaerat sed.
+                                </p>
+                            </div>
                         </div>
-                        <div class="content-left-side">
-                            <p class="username big">Cara membuat lampu dari botol bekas anti ribet</p>
-                            <p class="username small">Lampu meja minimalis ini menghadirkan nuansa hangat dan modern ke ruang kerja atau kamar tidur. Dengan desain elegan dan sentuhan kayu alami, lampu ini cocok untuk suasana produktif maupun relaksasi. Dilengkapi fitur pencahayaan LED hemat energi dan leher fleksibel untuk pencahayaan maksimal.
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad tempora eius explicabo, officiis rerum perferendis similique id optio suscipit, eveniet magni iusto at necessitatibus! Fugit, nesciunt. Culpa quod quaerat sed.
-                            </p>
+                    </div>
+                    <div class="overlay-instruction">
+                        <div class="instruction-carousel" id="instruction-carousel">
+                            <img class="instruction active" src="img/craft-picture-1.png" alt="">
+                            <img class="instruction" src="img/craft-picture-2.png" alt="">
+                            <img class="instruction" src="img/vertical-1-picture.png" alt="">
+                            <img class="instruction" src="img/vertical-2-picture.png" alt="">
                         </div>
+                        <div class="instruction-description">
+                            <p class="username big" id="instruction-step"></p>
+                            <p class="username small" id="instruction-description"></p>
+                        </div>
+                    </div>
+                    <div class="overlay-action-buttons">
+                        <button id="previousStep">Previous</button>
+                        <button id="nextStep">Next</button>
                     </div>
                 </div>
-                <div class="overlay-instruction">
-                    <div class="instruction-carousel" id="instruction-carousel">
-                        <img class="instruction active" src="img/craft-picture-1.png" alt="">
-                        <img class="instruction" src="img/craft-picture-2.png" alt="">
-                        <img class="instruction" src="img/vertical-1-picture.png" alt="">
-                        <img class="instruction" src="img/vertical-2-picture.png" alt="">
-                    </div>
-                    <div class="instruction-description">
-                        <p class="username big" id="instruction-step"></p>
-                        <p class="username small" id="instruction-description"></p>
-                    </div>
-                </div>
-                <div class="overlay-action-buttons">
-                    <button id="previousStep">Previous</button>
-                    <button id="nextStep">Next</button>
-                </div>  
             </div>
-        </div>
-        <script src="js/crafts-tutorial.js"></script>
-    </div>
-    <?php include 'navbar.html'?>
+            <script src="js/crafts-tutorial.js"></script>
+        </div>';
+        }
+    ?>
+    <?php include 'navbar.html'; ?>
 
     <div class="content">
         <div class="sidebar">
@@ -139,17 +147,28 @@
                     <img src="img/elements/others.png" alt="Lainnya">
                     <p class="textcategory">Lainnya</p>
                 </button>
-        </div>
-            <?php include 'tutorial-grid-crafts.php'?>
+            </div>
+            <?php include 'tutorial-grid-crafts.php'; ?>
         </main>
         <!-- <script src="../js/script.js"></script> -->
         <script>
-            function creates(){
+            function creates() {
                 location.replace("crafts-tutorial-upload.php");
             }
-            function categoryRedirect(id){
+
+            function categoryRedirect(id) {
                 location.replace("crafts-tutorial.php?category=" + arguments[0]);
             }
+
+            function locationHeader(){
+                location.replace("crafts-tutorial.php");
+            }
+
+            function craftsTutorialRedirect(id){
+                location.replace("crafts-tutorial.php?id=" + arguments[0]);
+            }
+
         </script>
 </body>
+
 </html>

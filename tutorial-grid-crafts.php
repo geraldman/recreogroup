@@ -5,7 +5,7 @@
             <img src="img/craft-picture-1.png" alt="">
         </div>
         <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-        <a href="#" class="box-button">Lihat ide ini</a>
+        <a onclick=craftsTutorialRedirect(1) class="box-button">Lihat ide ini</a>
     </div>
 
     <div class="box-frame">
@@ -13,7 +13,7 @@
             <img src="img/craft-picture-1.png" alt="">
         </div>
         <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-        <a href="#" class="box-button">Lihat ide ini</a>
+        <a onclick=craftsTutorialRedirect(1) class="box-button">Lihat ide ini</a>
     </div>
 
     <div class="box-frame">
@@ -21,7 +21,7 @@
             <img src="img/craft-picture-1.png" alt="">
         </div>
         <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-        <a href="#" class="box-button">Lihat ide ini</a>
+        <a onclick=craftsTutorialRedirect(1) class="box-button">Lihat ide ini</a>
     </div>
 
     <div class="box-frame">
@@ -29,7 +29,7 @@
             <img src="img/craft-picture-1.png" alt="">
         </div>
         <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-        <a href="#" class="box-button">Lihat ide ini</a>
+        <a onclick=craftsTutorialRedirect(1) class="box-button">Lihat ide ini</a>
     </div>
 
     <div class="box-frame">
@@ -37,7 +37,7 @@
             <img src="img/craft-picture-1.png" alt="">
         </div>
         <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-        <a href="#" class="box-button">Lihat ide ini</a>
+        <a onclick=craftsTutorialRedirect(1) class="box-button">Lihat ide ini</a>
     </div>
 
     <div class="box-frame">
@@ -45,7 +45,7 @@
             <img src="img/craft-picture-1.png" alt="">
         </div>
         <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-        <a href="#" class="box-button">Lihat ide ini</a>
+        <a onclick=craftsTutorialRedirect(1) class="box-button">Lihat ide ini</a>
     </div>
 
     <!-- Pagination -->

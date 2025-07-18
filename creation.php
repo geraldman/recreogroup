@@ -17,6 +17,44 @@
 </head>
 
 <body>
+    <?php
+        if(isset($_GET["id"])){
+        print '<div class="overlay">
+        <div class="overlay-container">
+            <div class="overlay-menubar">
+                <button id="overlay-exit" onclick=locationHeader()>X</button>
+            </div>
+            <div class="overlay-content">
+                <div class="upper-overlay-content">
+                    <div class="left-overlay">
+                        <img src="img/craft-picture-1.png" alt="">
+                        <p class="waste-category plastik">plastik</p>
+                    </div>
+                    <div class="right-overlay">
+                        <div class="overlay-menubar-right">
+                            <div class="menubar-left-side">
+                                <img src="img/elements/iconamoon_profile-circle-fill.png">
+                                <p class="username big">Anjelin</p>
+                            </div>
+                            <p class="username small">2 weeks ago</p>
+                        </div>
+                        <div class="content-left-side">
+                            <p class="username big">Cara membuat lampu dari botol bekas anti ribet</p>
+                            <p class="username small">Lampu meja minimalis ini menghadirkan nuansa hangat dan modern ke
+                                ruang kerja atau kamar tidur. Dengan desain elegan dan sentuhan kayu alami, lampu ini
+                                cocok untuk suasana produktif maupun relaksasi. Dilengkapi fitur pencahayaan LED hemat
+                                energi dan leher fleksibel untuk pencahayaan maksimal.
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad tempora eius explicabo,
+                                officiis rerum perferendis similique id optio suscipit, eveniet magni iusto at
+                                necessitatibus! Fugit, nesciunt. Culpa quod quaerat sed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>';}
+    ?>
 
     <?php include 'navbar.html'; ?>
 
@@ -56,7 +94,7 @@
 
         <main class="content-area">
             <h2 class="green">Creations</h2>
-            <p style="letter-spacing: 1.5px">Lorem ipsum    </p>
+            <p style="letter-spacing: 1.5px">Lorem ipsum </p>
 
             <div class="search-container">
                 <div class="search-box">
@@ -89,11 +127,11 @@
                     <img src="img/elements/others.png" alt="Lainnya">
                     <p class="textcategory">Lainnya</p>
                 </button>
-        </div>
+            </div>
 
             <div class="tutorial-grid">
-
-                <div class="box-frame one">
+                
+                <div class="box-frame one" onclick=craftsTutorialRedirect(1)>
                     <div class="box-image-frame">
                         <img src="img/craft-picture-1.png" alt="">
                         <div class="action-buttons">
@@ -101,13 +139,32 @@
                                 <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
                             </div>
                             <div class="options-dropdown">
-                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
+                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span>
                             </div>
                         </div>
                     </div>
                     <div class="box-text-frame">
                         <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
+                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi.
+                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
+                    </div>
+                </div>
+
+                <div class="box-frame one" onclick=craftsTutorialRedirect(1)>
+                    <div class="box-image-frame">
+                        <img src="img/craft-picture-1.png" alt="">
+                        <div class="action-buttons">
+                            <div class="likes-section">
+                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
+                            </div>
+                            <div class="options-dropdown">
+                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-text-frame">
+                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
+                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi.
                             Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
                     </div>
                 </div>
@@ -120,13 +177,13 @@
                                 <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
                             </div>
                             <div class="options-dropdown">
-                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
+                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span>
                             </div>
                         </div>
                     </div>
                     <div class="box-text-frame">
                         <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
+                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi.
                             Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
                     </div>
                 </div>
@@ -139,13 +196,13 @@
                                 <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
                             </div>
                             <div class="options-dropdown">
-                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
+                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span>
                             </div>
                         </div>
                     </div>
                     <div class="box-text-frame">
                         <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
+                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi.
                             Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
                     </div>
                 </div>
@@ -158,13 +215,13 @@
                                 <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
                             </div>
                             <div class="options-dropdown">
-                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
+                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span>
                             </div>
                         </div>
                     </div>
                     <div class="box-text-frame">
                         <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
+                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi.
                             Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
                     </div>
                 </div>
@@ -177,32 +234,13 @@
                                 <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
                             </div>
                             <div class="options-dropdown">
-                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
+                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span>
                             </div>
                         </div>
                     </div>
                     <div class="box-text-frame">
                         <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
-                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
-                    </div>
-                </div>
-
-                <div class="box-frame one">
-                    <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
-                        <div class="action-buttons">
-                            <div class="likes-section">
-                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
-                            </div>
-                            <div class="options-dropdown">
-                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-text-frame">
-                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
+                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi.
                             Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
                     </div>
                 </div>
@@ -219,13 +257,22 @@
                     </span>
                     <button class="next-btn">Next ▶</button>
                 </div> -->
-                
+
         </main>
         <script src="../js/script.js"></script>
         <script>
-            function creates(){
+            function creates() {
                 location.replace("creations-upload.php");
+            }
+
+            function locationHeader(){
+                location.replace("creation.php");
+            }
+
+            function craftsTutorialRedirect(id){
+                location.replace("creation.php?id=" + arguments[0]);
             }
         </script>
 </body>
+
 </html>

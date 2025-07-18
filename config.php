@@ -37,11 +37,11 @@ class DBConn{
         $this->conn = null;
     }
 
-    public function uploadCraftsTutorial($name, $title, $description, $email = "none"){
-        $sql = "INSERT INTO tutorials(tutor_name, tutor_title, tutor_description, tutor_email)
-        values (?, ?, ?, ?)";
+    public function uploadCraftsTutorial($name, $title, $description, $email = "none", $otp = "none"){
+        $sql = "INSERT INTO tutorials(tutor_name, tutor_title, tutor_description, tutor_email, otp_id)
+        values (?, ?, ?, ?, ?)";
         $result = $this->conn->prepare($sql);
-        $result->execute([$name, $title, $description, $email]);
+        $result->execute([$name, $title, $description, $email, $otp]);
         error_log("Upload Successful");   
         return 0;
     }
@@ -64,5 +64,9 @@ class DBConn{
         $result->execute([$id, $step, $imageurl, $description]);
         error_log("Upload Successful");
         return 0;
+    }
+
+    public function checkValidityCraftsTutorial($id){
+        return true;
     }
 }
