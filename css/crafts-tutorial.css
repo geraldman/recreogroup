@@ -1,5 +1,6 @@
 :root{
 --sidebar-width: 150px;
+--overlay-padding: 30px;
 }
 
 * {
@@ -103,6 +104,11 @@ display: block;
 width: 100%;
 }
 
+.content.disabled{
+    cursor: none;
+    pointer-events: none;
+}
+
 .sidebar {
 height: 120%;
 width: var(--sidebar-width);
@@ -119,7 +125,7 @@ transition: 0.3s;
 }
 
 .sidebar.scrolled{
-padding-top: 60px;
+padding-top: 50px;
 }
 
 .upload-btn {
@@ -191,8 +197,8 @@ margin-bottom: 5px;
 width: auto;
 margin-left: var(--sidebar-width);
 flex: 1;
-padding: 0 80px;
-padding-top: 80px;
+padding: 0 5.556vw;
+padding-top: 120px;
 }
 
 .search-container {
@@ -234,7 +240,7 @@ border-color: rgb(119, 52, 52);
 
 .tutorial-grid {
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto-fit untuk memenuhi lebar */
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit untuk memenuhi lebar */
 gap: 40px;
 margin-bottom: 40px;
 width: 100%;
@@ -255,6 +261,10 @@ justify-self: center;
 .tutorial-card:hover {
 transform: translateY(-3px);
 box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.tutorial-grid .box-frame{
+    width: 100%;
 }
 
 .card-header {
@@ -294,6 +304,199 @@ transition: background-color 0.3s;
 background: #e6d199;
 }
 
+.sidebar.mobile{
+    height: auto;
+    width: 100%;
+    position: relative;
+    display: none;
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    background-color: inherit;
+    padding-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar.mobile button{
+    width: 90px;
+}
+
+.overlay{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10000;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 50px;
+    overflow-y: auto;
+}
+
+.overlay-container{
+    width: 65%;
+    height: 75%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px 0px rgba(81, 57, 49, 0.8);
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay-menubar{
+    width: 100%;
+    min-height: 60px;
+    max-height: 60px;
+    background-color: #89511F;
+    position: relative;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.overlay-menubar-right{
+    width: 100%;
+    height: 70px;
+    background-color: #fbf2da;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    padding-left: var(--overlay-padding);
+    padding-right: var(--overlay-padding);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-left-side{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 20px var(--overlay-padding);
+}
+
+.content-left-side p.username.big, 
+.instruction-description p.username.big{
+    font-weight: 425;
+    font-size: 23px;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+
+.menubar-left-side{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.menubar-left-side img{
+    width: 42px;
+}
+
+.overlay-menubar button{
+    position: absolute;
+    right: 0;
+    width: 12%;
+    height: 100%;
+    border: none;
+    background-color: #C11D1D;
+    border-left: 2px solid white;
+    border-top-right-radius: inherit    ;
+}
+
+.left-overlay img{
+    max-height: 300px;
+    border-radius: 20px;
+    object-fit:fill;
+}
+
+.left-overlay, .right-overlay{
+    border-radius: 20px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 4px 0px rgba(103, 54, 11, 0.3);
+}
+
+.right-overlay{
+    width: 60%;
+}
+
+.left-overlay{
+    background-color: #FBF2DA;
+    width: 40%;
+    padding: 20px;
+    gap: 10px;
+    height: max-content;
+}
+
+.upper-overlay-content{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.overlay-instruction{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.instruction-carousel, .instruction-description{
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(103, 54, 11, 0.3);
+}
+
+.instruction-carousel{
+    width: 35%;
+    display: flex; /* Make it a flex container */
+    gap: 15px; /* Add some space between images */
+    align-items: center;
+    overflow: hidden;
+    padding: var(--overlay-padding);
+    background-color: #FBF2DA;
+}
+
+.instruction-carousel img{
+    border-radius: 20px;
+}
+
+.instruction-description{
+    width: 65%;
+    padding: var(--overlay-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.instruction{
+    width: 100%;
+    display: none;
+}
+
+.instruction.active{
+    display: flex;
+}
+
+.overlay-action-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1200px) {
 .tutorial-grid {
@@ -317,6 +520,11 @@ max-width: 200px;
 .card-image {
 height: 120px;
 }
+
+.content-area{
+    width: 100%;
+    margin-left: 0;
+}
 }
 
 @media (max-width: 480px) {
@@ -324,11 +532,6 @@ height: 120px;
 grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
 gap: 10px;
 padding: 0 10px;
-}
-
-.tutorial-card {
-min-width: 140px;
-max-width: 180px;
 }
 }
 .pagination {
@@ -399,9 +602,28 @@ grid-template-columns: repeat(3, 1fr);
 }
 }
 
+@media(max-width: 1024px){
+    .tutorial-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
 @media (max-width: 768px) {
 .nav-menu {
 display: none;
+}
+
+.content-area{
+    text-align: center;
+}
+
+.sidebar{
+    display: none;
+}
+
+.sidebar.mobile{
+    display: grid;
 }
 
 .main-container {
@@ -421,15 +643,31 @@ padding: 0 10px;
 }
 
 .tutorial-grid {
-grid-template-columns: repeat(2, 1fr);
 gap: 15px;
 }
 
-
+}
 
 @media (max-width: 480px) {
 .tutorial-grid {
 grid-template-columns: 1fr;
 }
+
+.search-input{
+    padding: 10px 10px 10px 45px;
+}
+
+.tutorial-card{
+    max-width: 225px;
+}
+
+.sidebar.mobile button{
+    width: 70px;
+    height: 70px;
+}
+
+.sidebar.mobile button img{
+    width: 27px;
+    height: 27px;
 }
 }

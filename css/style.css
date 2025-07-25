@@ -39,6 +39,31 @@ a{
     font-family: 'inter';
     color: black;
     font-weight:500;
+    font-size: 1rem;
+}
+
+a.box-button{
+    width: 100%;
+    text-align: center;
+    background-color: #2E8264;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+a.box-button:hover{
+    color: #2E8264;
+    background-color: white;
+    border: 1px solid #2E8264;
+}
+
+h3{
+    font-family: 'spartan-league';
+    font-weight: 575;
+    color: black;
 }
 
 h2{
@@ -55,7 +80,13 @@ h2.green{
     color: #2e8264;
     font-size: 60px;
     text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
+    line-height: normal;
 }
+
+h2.green.medium.inverted{
+    color: white;
+}
+
 
 h2.green.medium{
     display: inline-block;
@@ -63,6 +94,7 @@ h2.green.medium{
     color: #2e8264;
     font-size: 40px;
     text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
+    line-height: normal;
 }
 
 h2.green.small{
@@ -73,11 +105,46 @@ h2.green.smaller{
     font-size: 30px;
 }
 
+p.username{
+    color: rgba(103, 54, 11, 0.6);
+    letter-spacing: normal; 
+}
+
+p.username.big{
+    font-weight: 500;
+}
+
+p.username.small{
+    font-size: 17px;
+    color: rgba(81, 57, 49, 0.7);
+}
+
+.content-left-side p, .instruction-description p{
+    color: rgba(103, 54, 11, 1);
+}
+
+p.waste-category{
+    font-size: 15px;
+    padding: 0 15px;
+    color: #2E8264;
+    letter-spacing: normal;
+    border: 1px solid #2E8264;
+    background-color: #D8FCD3;
+    width: fit-content;
+    border-radius: 8px;
+    text-transform: capitalize;
+}
+
 p{
     font-family: 'inter';
     color: #641919;
     font-size: 20px;
     letter-spacing: 3px;
+}
+
+p.upload-text{
+    letter-spacing: 1.5px;
+    line-height: normal;
 }
 
 p.bold.black{
@@ -103,11 +170,17 @@ p.small{
     font-family: 'arial-unicode-ms';
     letter-spacing: normal;
     color: #d9d9d9;
-    font-size: 16px;
+    font-size: 1.111vw;
 }
 
 p.small.white{
     color: white;
+}
+
+p.small.light.black{
+    font-family: 'spartan-league';
+    font-weight: normal;
+    font-size: 15px;
 }
 
 p.smaller, label{
@@ -149,7 +222,7 @@ p.textcategory.white{
     color: white;
 }
 
-label.smaller.bold{
+label.smaller.bold, #tutorialForm label, #uploadForm label{
     color: black;
     font-size: 15px;
     font-family: 'arial-unicode-ms-bold';
@@ -252,7 +325,7 @@ label.smaller.bold{
 
 .hero-wrap{ 
     display: inline-flex;
-    margin-top: 120px;
+    margin-top: 100px;
     height: max-content;
     gap: 50px;
 }
@@ -275,4 +348,114 @@ label.smaller.bold{
 .flex-column{
     display: flex;
     flex-direction: column;
+}
+
+.upload-content-button button, .form-actions button, .overlay-action-buttons button{
+    padding: 12px 24px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    color: white;
+    font-weight: 600;
+    opacity: 1;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.upload-content-button button:disabled, .form-actions button:disabled, .overlay-action-buttons button:disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+button[id="addStep"], button[id="nextStep"]{
+    background-color:#2e8264;
+}
+
+button[id="addStep"]:hover, button[id="nextStep"]:hover{
+    background-color:white;
+    border: 1px solid #2E8264;
+    color: #2E8264;
+}
+
+button[id="deleteStep"], button[id="generateCodeBtn"], button[id="previousStep"]{
+    background-color: grey;
+}
+
+button[id="deleteStep"]:hover, button[id="generateCodeBtn"]:hover, button[id="previousStep"]:hover{
+    color: grey;
+    border: 1px solid grey;
+    background-color: white;
+}
+
+button[id="resetBtn"]{
+    background-color: #df0004;
+}
+
+button[id="resetBtn"]:hover{
+    color: #df0004;
+    border: 1px solid #df0004;
+    background-color: white;
+}
+
+@media(max-width: 1024px){
+
+    .hero-wrap{
+        margin-top: calc(8.333vw + 30px);
+    }
+
+    h2{
+        font-size: 40px;
+        line-height: 43px;
+    }
+    p{
+        font-size: 15px;
+    }
+    p.small.bold{
+        font-size: 2.241vw;
+        line-height: 2.437vw;
+    }
+
+    p.small{
+        font-size: 1.994vw;
+        line-height: 2.144vw;
+    }
+}
+
+@media(max-width: 768px){
+    p.small.bold{
+        font-size: 15px;
+        line-height: normal;
+    }
+
+    p.small{
+        font-size: 12px;
+        line-height: normal;
+    }
+
+    .visimisi-text.small.white{
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 480px){
+    h2{
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    h2.green{
+        display: inline-block;
+        font-family: 'spartan-league';
+        color: #2e8264;
+        font-size: 40px;
+        text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
+        line-height: normal;
+    }
+
+    h2.green.medium.inverted{
+        font-size: 30px;
+    }
+
+    p{
+        font-size: 15px;
+    }
 }
