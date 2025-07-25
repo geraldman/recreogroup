@@ -1,10 +1,14 @@
 <?php
+    require_once 'config.php';
+    $conn = new DBConn();
+
     if(isset($_POST["submit"])){
-        session_start(); // Session initialization
-        error_log("Session starts");
+        session_start();
         $_SESSION['POST'] = $_POST;
+        $_SESSION['FILE_POST'] = $_FILES;
         $_SESSION['HEAD'] = "crafts-tutorial-upload.php";
-        header("Location: crafts-process.php"); 
+        header("Location:crafts-process.php");
+        exit;
     }
 ?>
 
@@ -48,11 +52,14 @@
                         <label for="kategori_bahan">Kategori berdasarkan bahan</label>
                         <select id="kategori_bahan" name="kategori_bahan" required>
                             <option value="">Pilih kategori bahan</option>
-                            <option value="Plastik">Plastik</option>
-                            <option value="Kain">Kain</option>
-                            <option value="Kertas">Kertas</option>
-                            <option value="Kayu">Kayu</option>
-                            <option value="Lainnya">Lainnya</option>
+                            <?php
+                            $categories = $conn->readCategoryName();
+                            foreach($categories as $cat){
+                                ?>
+                                <option value="<?=($cat["category_id"])?>"><?=$cat["category_name"]?></option>
+                                <?php
+                            }
+                            ?>
                         </select>
                         <div class="error"></div>
                     </div>
@@ -86,9 +93,7 @@
                     <div class="content-group">
                         <h5 class="content-title">Bahan dan alat yang dibutuhkan :</h5>
                         <div class="textarea-container">
-                            <textarea id="bahan_alat" name="bahan_alat"
-                                placeholder="-1 buah kardus ukuran sedang&#10;- Gunting dan cutter&#10;- Lem tembak atau lem putih&#10;- Kertas warna atau cat akrilik"
-                                required>
+                            <textarea id="bahan_alat" name="bahan_alat" placeholder="-1 buah kardus ukuran sedang&#10;- Gunting dan cutter&#10;- Lem tembak atau lem putih&#10;- Kertas warna atau cat akrilik" required>
                             </textarea>
                         </div>
                     </div>
@@ -105,7 +110,7 @@
                     <button id="resetBtn">
                         Reset
                     </button>
-                    <button type="submit" class="btn-submit" id="btn-submit-data">
+                    <button type="submit" name="submit" class="btn-submit" id="btn-submit-data">
                         Bagikan sekarang
                     </button>
                 </div>

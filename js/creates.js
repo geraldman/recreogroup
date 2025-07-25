@@ -10,10 +10,28 @@ mainUploadAreaContainer.addEventListener('click', () => {
 
 mainFileInput.addEventListener('change', function(e) {
     if (e.target.files.length > 0) {
-        const fileName = e.target.files[0].name;
-        mainUploadText.textContent = `File dipilih: ${fileName}`;
+        const file = e.target.files[0];
+        const fileName = file.name;
+        const fileSize = file.size;
+        const maxSize = 5 * 1024 * 1024; // 5MB
+        const allowedTypes = ['image/png', 'image/jpeg', 'image/jpg'];
+        
+        // Check file type
+        if (!allowedTypes.includes(file.type)) {
+            mainUploadText.textContent = `Format file tidak didukung! Gunakan PNG, JPEG, atau JPG`;
+            mainFileInput.value = '';
+            return;
+        }
+        
+        // Check file size
+        if (fileSize > maxSize) {
+            mainUploadText.textContent = `File terlalu besar! Maksimal 5MB (ukuran file: ${(fileSize / 1024 / 1024).toFixed(2)}MB)`;
+            mainFileInput.value = '';
+        } else {
+            mainUploadText.textContent = `File dipilih: ${fileName} (${(fileSize / 1024 / 1024).toFixed(2)}MB)`;
+        }
     } else {
-        mainUploadText.textContent = `Unggah maksimal 1 file (format: png/jpeg/jpg)`; // Reset if no file is selected
+        mainUploadText.textContent = `Unggah maksimal 1 file (format: png/jpeg/jpg)`;
     }
 });
 
@@ -37,36 +55,52 @@ function createInstructions(stepNumber){
             <h5 class="upload-title">Upload tutorial foto langkah ke-${stepNumber}</h5>
             <div class="upload-area">
                 <i class="fas fa-cloud-upload-alt upload-icon"></i>
-                <p class="upload-text">Unggah maksimal 1
-                 file (format: png/jpeg/jpg)</p>
+                <p class="upload-text">Unggah maksimal 1 file (format: png/jpeg/jpg)</p>
                 <input type="file" id="${fileInputId}" name="${fileInputId}" accept="image/*"
                     multiple style="display: none;" required>
-                </div>
             </div>
-            <div class="content-group">
-                <h5 class="content-title">Langkah ke-${stepNumber}:</h5>
-                <div class="textarea-container">
-                    <textarea id="${textAreaId}" name="${textAreaId}"
-                        placeholder="Potong kardus sesuai ukuran yang diinginkan untuk bagian utama." required></textarea>
-                </div>
+        </div>
+        <div class="content-group">
+            <h5 class="content-title">Langkah ke-${stepNumber}:</h5>
+            <div class="textarea-container">
+                <textarea id="${textAreaId}" name="${textAreaId}"
+                    placeholder="Potong kardus sesuai ukuran yang diinginkan untuk bagian utama." required></textarea>
             </div>
         </div>
     `;
 
     const uploadArea = instructionStep.querySelector('.upload-area');
     const fileInput = instructionStep.querySelector(`#${fileInputId}`);
+    const uploadText = instructionStep.querySelector('.upload-text'); // Get the correct upload text element
 
     uploadArea.addEventListener('click', () => {
         fileInput.click();
     });
 
-    fileInput.addEventListener('change', (e) =>{
-        if(e.target.files.length > 0){
-            const fileName = e.target.files[0].name;
-            uploadArea.querySelector('.upload-text').textContent = `File dipilih: ${fileName}`;
-        }
-        else{
-            uploadArea.querySelector('.upload-text').textContent = `Unggah 1 foto (format: png/jpeg/jpg)`;
+    fileInput.addEventListener('change', function(e) {
+        if (e.target.files.length > 0) {
+            const file = e.target.files[0];
+            const fileName = file.name;
+            const fileSize = file.size;
+            const maxSize = 5 * 1024 * 1024; // 5MB
+            const allowedTypes = ['image/png', 'image/jpeg', 'image/jpg'];
+            
+            // Check file type
+            if (!allowedTypes.includes(file.type)) {
+                uploadText.textContent = `Format file tidak didukung! Gunakan PNG, JPEG, atau JPG`;
+                fileInput.value = '';
+                return;
+            }
+            
+            // Check file size
+            if (fileSize > maxSize) {
+                uploadText.textContent = `File terlalu besar! Maksimal 5MB (ukuran file: ${(fileSize / 1024 / 1024).toFixed(2)}MB)`;
+                fileInput.value = '';
+            } else {
+                uploadText.textContent = `File dipilih: ${fileName} (${(fileSize / 1024 / 1024).toFixed(2)}MB)`;
+            }
+        } else {
+            uploadText.textContent = `Unggah maksimal 1 file (format: png/jpeg/jpg)`;
         }
     });
 

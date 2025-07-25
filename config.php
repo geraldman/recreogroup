@@ -24,12 +24,13 @@ class DBConn{
         try{
             $this->conn = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
             error_log("Connection to database is successful");
-            echo "Hello";
-            return 1;
+            $this->connection_successful = true;
+            return $this->connection_successful;
         }
         catch(PDOException $e){
+            error_log("Connection Failed " . $e->getMessage());
             $this->connection_successful = false;
-            return 0;
+            return $this->connection_successful;
         }
     }
 
@@ -37,24 +38,50 @@ class DBConn{
         $this->conn = null;
     }
 
-    public function uploadCraftsTutorial($name, $title, $description, $email = "none", $otp = "none"){
-        $sql = "INSERT INTO tutorials(tutor_name, tutor_title, tutor_description, tutor_email, otp_id)
-        values (?, ?, ?, ?, ?)";
+    public function uploadCraftsTutorial($name, $title, $description, $tools, $time_added, $email = "none", $otp = "999"){
+        $sql = "INSERT INTO tutorials(tutor_name, tutor_title, tutor_description, tools, time_added, tutor_email, otp_id)
+        values (?, ?, ?, ?, ?, ?, ?)";
         $result = $this->conn->prepare($sql);
-        $result->execute([$name, $title, $description, $email, $otp]);
-        error_log("Upload Successful");   
+        $result->execute([$name, $title, $description, $tools, $time_added, $email, $otp]); 
         return 0;
     }
 
-    public function readCraftsTutorialId($name, $title, $email){
-        $sql = "SELECT tutorial_id FROM tutorials WHERE tutor_name = ? AND tutor_title = ? AND tutor_email = ?";
+    public function readCategoryName(){
+        $sql = "SELECT category_id, category_name FROM categories";
         $result = $this->conn->prepare($sql);
-        $result->execute([$name, $title, $email]);
+        $result->execute();
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function tutorialCategoryUpload($tutor_id, $cat_id){
+        $sql = "INSERT INTO tutorial_category(tutorial_id, category_id) values (?, ?)";
+        $result = $this->conn->prepare($sql);
+        $result->execute([$tutor_id, $cat_id]);
+        return 0;
+    }
+
+    public function readCraftsTutorialId($name, $title, $time){
+        $sql = "SELECT tutorial_id FROM tutorials WHERE tutor_name = ? AND tutor_title = ? AND time_added = ?";
+        $result = $this->conn->prepare($sql);
+        $result->execute([$name, $title, $time]);
+        $row = $result->fetch(PDO::FETCH_ASSOC);
+
+        if($row){
+            return $row["tutorial_id"];
+        }
+        return false;
+    }
+
+    // checking if the name's already in the table (boolean)
+    public function checkTitleValidity($title){
+        $sql = "SELECT tutor_title FROM tutorials WHERE tutor_title = ?";
+        $result = $this->conn->prepare($sql);
+        $result->execute($title);
         $row = $result->fetch(PDO::FETCH_ASSOC);
         if($row){
-            return $row;
+            return true;
         }
-        return 0;
+        return false;
     }
     
     public function uploadTutorialSteps($id, $step, $imageurl, $description){
