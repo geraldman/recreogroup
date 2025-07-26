@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar"></div>
+    
+    <div class="main-content">
+        <div class="header">
+            <h1>Koleksi</h1>
+        </div>
+        
+        <div class="form-section">
+            <div class="form-group">
+                <label>Judul Quiz</label>
+                <input type="text" id="quizTitle" placeholder="Kasi judul quiz">
+            </div>
+            
+            <div class="subjects-time-row">
+                <div class="subjects-group">
+                    <label>Pilih Subjek</label>
+                    <div class="subject-tabs">
+                        <button class="subject-tab active" data-subject="recreo">Recreo Articles</button>
+                        <button class="subject-tab" data-subject="matematika">Matematika</button>
+                        <button class="subject-tab" data-subject="english">English</button>
+                        <button class="subject-tab" data-subject="art">Art</button>
+                    </div>
+                </div>
+                
+                <div class="time-group">
+                    <label>Atur waktu</label>
+                    <div class="time-selector">
+                        <input type="text" class="time-input" value="08" readonly>
+                        <span>:</span>
+                        <input type="text" class="time-input" value="30" readonly>
+                        <select class="time-dropdown">
+                            <option value="minutes">min</option>
+                            <option value="hours">jam</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Link Artikel</label>
+                <input type="text" id="articleLink" placeholder="Link Recreo artikel">
+            </div>
+        </div>
+        
+        <div class="upload-section">
+            <div class="upload-icon">📁</div>
+            <div class="upload-text">Tambahkan Thumbnail</div>
+            <div class="upload-subtext">Unggah 1 foto (format: png/jpeg/jpg)</div>
+        </div>
+        
+        <div class="question-container">
+            <div class="question-header">
+                <span class="question-title">Question 1</span>
+                <div class="question-controls">
+                    <button class="control-btn">📋</button>
+                    <button class="control-btn">🗑️</button>
+                </div>
+            </div>
+            <div class="question-content">
+                <textarea class="question-input" placeholder="Masukkan pertanyaan kamu disini"></textarea>
+                <div class="options-container">
+                    <div class="option-row">
+                        <div class="option-checkbox checked" data-option="1"></div>
+                        <input type="text" class="option-input" placeholder="Pilihan 1">
+                    </div>
+                    <div class="option-row">
+                        <div class="option-checkbox" data-option="2"></div>
+                        <input type="text" class="option-input" placeholder="Pilihan 2">
+                    </div>
+                    <div class="option-row">
+                        <div class="option-checkbox" data-option="3"></div>
+                        <input type="text" class="option-input" placeholder="Pilihan 3">
+                    </div>
+                    <div class="option-row">
+                        <div class="option-checkbox" data-option="4"></div>
+                        <input type="text" class="option-input" placeholder="Pilihan 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="question-container">
+            <div class="question-header">
+                <span class="question-title">Question 2</span>
+                <div class="question-controls">
+                    <button class="control-btn">📋</button>
+                    <button class="control-btn">🗑️</button>
+                </div>
+            </div>
+            <div class="question-content">
+                <textarea class="question-input" placeholder="Masukkan pertanyaan kamu disini"></textarea>
+                <div class="options-container">
+                    <div class="option-row">
+                        <div class="option-checkbox" data-option="1"></div>
+                        <input type="text" class="option-input" placeholder="Pilihan 1">
+                    </div>
+                    <div class="option-row">
+                        <div class="option-checkbox" data-option="2"></div>
+                        <input type="text" class="option-input" placeholder="Pilihan 2">
+                    </div>
+                    <div class="option-row">
+                        <div class="option-checkbox checked" data-option="3"></div>
+                        <input type="text" class="option-input" placeholder="Pilihan 3">
+                    </div>
+                    <div class="option-row">
+                        <div class="option-checkbox" data-option="4"></div>
+                        <input type="text" class="option-input" placeholder="Pilihan 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="add-question-btn">
+            <button class="btn-add">+ Tambah Pertanyaan</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../img/17.png" alt="ReCreo Logo">
+                <i class="fas fa-chart-line"></i>
+                <h2>Recreo Website Analytics</h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-section="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item" data-section="visitors">
+                    <i class="fas fa-users"></i>
+                    Visitors
+                </a>
+                <a href="#" class="nav-item" data-section="likes">
+                    <i class="fas fa-heart"></i>
+                    Likes
+                </a>
+                <a href="#" class="nav-item" data-section="quiz">
+                    <i class="fas fa-question-circle"></i>
+                    Quiz Management
+                </a>
+                <a href="#" class="nav-item" data-section="reports">
+                    <i class="fas fa-chart-bar"></i>
+                    Reports
+                </a>
+                <a href="#" class="nav-item" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <h1 id="section-title">Dashboard Overview</h1>
+                    <p>Welcome back, Admin!</p>
+                </div>
+                <div class="header-right">
+                    <div class="date-time" id="currentDateTime"></div>
+                    <div class="profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Section -->
+            <div id="dashboard-section" class="content-section active">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon visitors">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalVisitors">0</h3>
+                            <p>Total Visitors</p>
+                            <span class="stat-change positive">+12%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon likes">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalLikes">0</h3>
+                            <p>Total Likes</p>
+                            <span class="stat-change positive">+8%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon pageviews">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalPageviews">0</h3>
+                            <p>Page Views</p>
+                            <span class="stat-change positive">+15%</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon quiz">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalQuestions">15</h3>
+                            <p>Quiz Questions</p>
+                            <span class="stat-change positive">+2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-section">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Visitors Analytics</h3>
+                            <select id="timeRange">
+                                <option value="7">Last 7 days</option>
+                                <option value="30">Last 30 days</option>
+                                <option value="90">Last 90 days</option>
+                            </select>
+                        </div>
+                        <div class="chart" id="visitorsChart">
+                            <canvas id="chartCanvas" width="800" height="300"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="recent-activity">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-list" id="activityList">
+                            <!-- Activity items will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="actions-grid">
+                        <button class="action-btn" id="refreshData">
+                            <i class="fas fa-sync-alt"></i>
+                            Refresh Data
+                        </button>
+                        <button class="action-btn" id="exportData">
+                            <i class="fas fa-download"></i>
+                            Export Report
+                        </button>
+                        <button class="action-btn" id="addVisitor">
+                            <i class="fas fa-plus"></i>
+                            Add Visitor
+                        </button>
+                        <button class="action-btn" id="manageQuiz">
+                            <i class="fas fa-question-circle"></i>
+                            Manage Quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Management Section -->
+            <div id="quiz-section" class="content-section">
+                <div class="quiz-header">
+                    <h2>Quiz Management</h2>
+                    <button class="add-question-btn" id="addQuestionBtn">
+                        <i class="fas fa-plus"></i>
+                        Tambah Soal
+                    </button>
+                </div>
+
+                <div class="quiz-stats">
+                    <div class="quiz-stat-card">
+                        <h3 id="quizTotalQuestions">15</h3>
+                        <p>Total Questions</p>
+                    </div>
+                    <div class="quiz-stat-card">
+                        <h3 id="quizTotalAttempts">342</h3>
+                        <p>Quiz Attempts</p>
+                    </div>
+                    <div class="quiz-stat-card">
+                        <h3 id="averageScore">78%</h3>
+                        <p>Average Score</p>
+                    </div>
+                </div>
+
+                <div class="questions-list">
+                    <h3>Daftar Soal Quiz</h3>
+                    <div id="questionsList">
+                        <!-- Questions will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other sections (hidden by default) -->
+            <div id="visitors-section" class="content-section">
+                <h2>Visitors Management</h2>
+                <p>Visitor analytics and management tools will be here.</p>
+            </div>
+
+            <div id="likes-section" class="content-section">
+                <h2>Likes Management</h2>
+                <p>Likes analytics and management tools will be here.</p>
+            </div>
+
+            <div id="reports-section" class="content-section">
+                <h2>Reports</h2>
+                <p>Detailed reports and analytics will be here.</p>
+            </div>
+
+            <div id="settings-section" class="content-section">
+                <h2>Settings</h2>
+                <p>System settings and configuration will be here.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Question Modal -->
+    <div id="addQuestionModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Tambah Soal Baru</h2>
+                <span class="close" id="closeModal">&times;</span>
+            </div>
+            <form id="addQuestionForm">
+                <div class="form-group">
+                    <label for="questionText">Pertanyaan:</label>
+                    <textarea id="questionText" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="answerA">Jawaban A:</label>
+                    <input type="text" id="answerA" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="answerB">Jawaban B:</label>
+                    <input type="text" id="answerB" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="answerC">Jawaban C:</label>
+                    <input type="text" id="answerC" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="answerD">Jawaban D:</label>
+                    <input type="text" id="answerD" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="correctAnswer">Jawaban Benar:</label>
+                    <select id="correctAnswer" required>
+                        <option value="">Pilih jawaban benar</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" id="cancelBtn">Batal</button>
+                    <button type="submit" class="submit-btn">Tambah Soal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReCreo - Quiz Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <span class="leaf">🌿</span>
+                    <span class="text">ReCreo</span>
+                </div>
+                <span class="subtitle">PSIKIS</span>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="header">
+                <h1>Quizzes</h1>
+                <div class="tabs">
+                    <button class="tab active">Buat Quiz</button>
+                    <button class="tab">Koleksi</button>
+                </div>
+            </div>
+            
+            <div class="quiz-results">
+                <h2>Recreo Artikel</h2>
+                <div class="quiz-info">
+                    <div class="quiz-title">
+                        <span class="title">Soal dari artikel 1</span>
+                        <span class="view-questions">Lihat Soal</span>
+                        <span class="question-count">15 Soal</span>
+                        <span class="duration">5 menit</span>
+                    </div>
+                </div>
+                
+                <div class="stats-container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="icon">👥</span>
+                            <span class="label">Total : 75 Pengguna</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="icon">📊</span>
+                            <span class="label">Rata-rata Skor : 8.5/10</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="icon">🏆</span>
+                            <span class="label">Skor Tertinggi : 10/10</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="icon">🎯</span>
+                            <span class="label">Skor Terendah : 4/10</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="charts-container">
+                    <div class="chart-section">
+                        <h3>Curve</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="barChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-section">
+                        <h3>Curve 2</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-table">
+                    <div class="table-header">
+                        <span>Sort By :</span>
+                        <select id="sortBy">
+                            <option value="rank">Rank</option>
+                            <option value="name">Name</option>
+                            <option value="score">Score</option>
+                        </select>
+                    </div>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Name</th>
+                                <th>Score</th>
+                                <th>Timer</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsTableBody">
+                            <!-- Table rows will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'League Spartan', sans-serif;
+  background: radial-gradient(circle at center, #fef6ed 40%, #c0f2ca);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: #295b3e;
+  font-size: 40px;
+  margin: 40px 0 160px;
+}
+
+.podium-outer-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -20px;
+  position: relative;
+  z-index: 2;
+  margin-left: -400px;
+}
+
+.step-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0 15px;
+}
+
+.step-outline {
+  width: 100px;
+  background: #2E8264;
+  border-radius: 14px 14px 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.first-outline { 
+  height: 125px; 
+}
+
+.second-outline { 
+  height: 95px; 
+}
+
+.third-outline { 
+  height: 75px; 
+}
+
+.step {
+  width: 80px;
+  background: #2E8264;
+  border: 3px dashed #E5C497;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+.first { 
+  height: 110px; 
+}
+
+.second { 
+  height: 80px; 
+}
+
+.third { 
+  height: 60px; 
+}
+
+.badge {
+  width: 40px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cat {
+  position: absolute;
+  top: 60px;
+  right: -30px;
+  width: 90px;
+  z-index: 3;
+}
+
+.outer-container {
+  background: #2E8264;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.inner-container {
+  background: #14AC75;
+  border-radius: 20px;
+  padding: 40px 30px 30px;
+  width: 700px;
+  position: relative;
+  border: 3px dashed #E5C497;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+th {
+  background-color: #2E8264;
+  color: white;
+  padding: 14px;
+  text-align: center;
+  font-weight: bold;
+}
+
+td {
+  background-color: white;
+  padding: 12px 10px;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  font-weight: bold;
+}
+
+tr.rank-1 td::after,
+tr.rank-2 td::after,
+tr.rank-3 td::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background-color: #FFE600;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+tr.rank-default td::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background-color: #007C9D;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.update-time {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #fff;
+  text-align: left;
+}
+
+.start-btn {
+  margin: 30px auto;
+  background: #fff18f;
+  padding: 12px 54px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #4d3600;
+  box-shadow: 0 3px #e1c769;
+  cursor: pointer;
+}
+
+.trophy {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  z-index: 2;
+}
