@@ -265,6 +265,7 @@ box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 
 .tutorial-grid .box-frame{
     width: 100%;
+    max-width: 360px;
 }
 
 .card-header {

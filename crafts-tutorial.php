@@ -1,6 +1,6 @@
 <?php 
 include 'config.php';
-// $conn = new DBConn();
+$conn = new DBConn();
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +23,10 @@ include 'config.php';
 <body>
     <?php
         if(isset($_GET["id"])){
-        print '<div class="overlay">
+        $information = $conn->readCraftsTutorialById(htmlspecialchars($_GET["id"]));
+        // print_r($information);
+        ?>
+        <div class="overlay">
             <div class="overlay-container">
                 <div class="overlay-menubar">
                     <button id="overlay-exit" onclick=locationHeader()>X</button>
@@ -31,36 +34,40 @@ include 'config.php';
                 <div class="overlay-content">
                     <div class="upper-overlay-content">
                         <div class="left-overlay">
-                            <img src="img/craft-picture-1.png" alt="">
+                            <img src="<?=$information["baseimg_url"]?>" alt="">
                             <p class="waste-category plastik">plastik</p>
                         </div>
                         <div class="right-overlay">
                             <div class="overlay-menubar-right">
                                 <div class="menubar-left-side">
                                     <img src="img/elements/iconamoon_profile-circle-fill.png">
-                                    <p class="username big">Anjelin</p>
+                                    <p class="username big"><?=$information["tutor_name"]?></p>
                                 </div>
                                 <p class="username small">2 weeks ago</p>
                             </div>
                             <div class="content-left-side">
-                                <p class="username big">Cara membuat lampu dari botol bekas anti ribet</p>
-                                <p class="username small">Lampu meja minimalis ini menghadirkan nuansa hangat dan modern ke
-                                    ruang kerja atau kamar tidur. Dengan desain elegan dan sentuhan kayu alami, lampu ini
-                                    cocok untuk suasana produktif maupun relaksasi. Dilengkapi fitur pencahayaan LED hemat
-                                    energi dan leher fleksibel untuk pencahayaan maksimal.
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad tempora eius explicabo,
-                                    officiis rerum perferendis similique id optio suscipit, eveniet magni iusto at
-                                    necessitatibus! Fugit, nesciunt. Culpa quod quaerat sed.
+                                <p class="username big"><?=$information["tutor_title"]?></p>
+                                <p class="username small"><?=$information["tutor_description"]?>
+                                </p>
+                            </div>
+                            <div class="content-left-side">
+                                <p class="username big">Tools</p>
+                                <p class="username small">
+                                <?=$information["tools"]?>
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="overlay-instruction">
                         <div class="instruction-carousel" id="instruction-carousel">
-                            <img class="instruction active" src="img/craft-picture-1.png" alt="">
-                            <img class="instruction" src="img/craft-picture-2.png" alt="">
-                            <img class="instruction" src="img/vertical-1-picture.png" alt="">
-                            <img class="instruction" src="img/vertical-2-picture.png" alt="">
+                            <?php
+                                $steps = $conn->readCraftsTutorialStepById(htmlspecialchars($_GET["id"]));
+                                // print_r($steps);
+                                foreach($steps as $step){?>
+                                    <img class="instruction" src="<?=$step["tutorial_image_url"]?>" alt="">
+                                <?php
+                                }
+                            ?>
                         </div>
                         <div class="instruction-description">
                             <p class="username big" id="instruction-step"></p>
@@ -74,7 +81,11 @@ include 'config.php';
                 </div>
             </div>
             <script src="js/crafts-tutorial.js"></script>
-        </div>';
+        </div>
+        <?php
+        $stepDescriptions = array_column($steps, 'tutorial_step_description');?>
+        <script>const descriptions = <?= json_encode($stepDescriptions); ?>;</script>
+        <?php
         }
     ?>
     <?php include 'navbar.html'; ?>

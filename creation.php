@@ -1,3 +1,8 @@
+<?php
+    require 'config.php';
+    $conn = new DBConn();
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -19,7 +24,9 @@
 <body>
     <?php
         if(isset($_GET["id"])){
-        print '<div class="overlay">
+            $overlayInfo = $conn->readCreationsById(htmlspecialchars($_GET["id"]));
+        ?>
+        <div class="overlay">
         <div class="overlay-container">
             <div class="overlay-menubar">
                 <button id="overlay-exit" onclick=locationHeader()>X</button>
@@ -27,34 +34,28 @@
             <div class="overlay-content">
                 <div class="upper-overlay-content">
                     <div class="left-overlay">
-                        <img src="img/craft-picture-1.png" alt="">
+                        <img src="<?=$overlayInfo['baseimg_url']?>" alt="">
                         <p class="waste-category plastik">plastik</p>
                     </div>
                     <div class="right-overlay">
                         <div class="overlay-menubar-right">
                             <div class="menubar-left-side">
                                 <img src="img/elements/iconamoon_profile-circle-fill.png">
-                                <p class="username big">Anjelin</p>
+                                <p class="username big"><?=$overlayInfo['creation_name']?></p>
                             </div>
                             <p class="username small">2 weeks ago</p>
                         </div>
                         <div class="content-left-side">
-                            <p class="username big">Cara membuat lampu dari botol bekas anti ribet</p>
-                            <p class="username small">Lampu meja minimalis ini menghadirkan nuansa hangat dan modern ke
-                                ruang kerja atau kamar tidur. Dengan desain elegan dan sentuhan kayu alami, lampu ini
-                                cocok untuk suasana produktif maupun relaksasi. Dilengkapi fitur pencahayaan LED hemat
-                                energi dan leher fleksibel untuk pencahayaan maksimal.
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad tempora eius explicabo,
-                                officiis rerum perferendis similique id optio suscipit, eveniet magni iusto at
-                                necessitatibus! Fugit, nesciunt. Culpa quod quaerat sed.
+                            <p class="username big"><?=$overlayInfo['creation_title']?></p>
+                            <p class="username small"><?=$overlayInfo['creation_description']?>
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>';}
-    ?>
+    </div>
+    <?php } ?>
 
     <?php include 'navbar.html'; ?>
 
@@ -130,10 +131,14 @@
             </div>
 
             <div class="tutorial-grid">
-                
-                <div class="box-frame one" onclick=craftsTutorialRedirect(1)>
+                <?php
+                    $information = $conn->readAllCreations();
+                    // print_r($information);
+                    foreach($information as $info){
+                ?>
+                <div class="box-frame one" onclick="craftsTutorialRedirect(<?=$info['creation_id']?>)">
                     <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
+                        <img src="<?=$info['baseimg_url']?>" alt="">
                         <div class="action-buttons">
                             <div class="likes-section">
                                 <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
@@ -144,120 +149,13 @@
                         </div>
                     </div>
                     <div class="box-text-frame">
-                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi.
-                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
+                        <h3><?=$info['creation_title']?></h3>
+                        <p class="small black light"><?=$info['creation_description']?></p>
                     </div>
                 </div>
-
-                <div class="box-frame one" onclick=craftsTutorialRedirect(1)>
-                    <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
-                        <div class="action-buttons">
-                            <div class="likes-section">
-                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
-                            </div>
-                            <div class="options-dropdown">
-                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-text-frame">
-                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi.
-                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
-                    </div>
-                </div>
-
-                <div class="box-frame one">
-                    <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
-                        <div class="action-buttons">
-                            <div class="likes-section">
-                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
-                            </div>
-                            <div class="options-dropdown">
-                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-text-frame">
-                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi.
-                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
-                    </div>
-                </div>
-
-                <div class="box-frame one">
-                    <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
-                        <div class="action-buttons">
-                            <div class="likes-section">
-                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
-                            </div>
-                            <div class="options-dropdown">
-                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-text-frame">
-                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi.
-                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
-                    </div>
-                </div>
-
-                <div class="box-frame one">
-                    <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
-                        <div class="action-buttons">
-                            <div class="likes-section">
-                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
-                            </div>
-                            <div class="options-dropdown">
-                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-text-frame">
-                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi.
-                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
-                    </div>
-                </div>
-
-                <div class="box-frame one">
-                    <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
-                        <div class="action-buttons">
-                            <div class="likes-section">
-                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
-                            </div>
-                            <div class="options-dropdown">
-                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-text-frame">
-                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi.
-                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
-                    </div>
-                </div>
-
-                <!-- Pagination -->
-                <!-- <div class="pagination">
-                    <button class="prev-btn">◀ Prev</button>
-                    <span class="page-numbers">
-                        <span class="page-num">1</span>
-                        <span class="page-num">2</span>
-                        <span class="page-num active">3</span>
-                        <span class="page-dots">...</span>
-                        <span class="page-num">25</span>
-                    </span>
-                    <button class="next-btn">Next ▶</button>
-                </div> -->
-
+                <?php 
+                }
+                ?>
         </main>
         <script src="../js/script.js"></script>
         <script>

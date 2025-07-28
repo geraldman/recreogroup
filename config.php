@@ -122,10 +122,45 @@ class DBConn{
         return false;
     }
 
+    public function readAllCreations(){
+        $sql = "SELECT * FROM creations";
+        $result = $this->conn->prepare($sql);
+        $result->execute();
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function readCreationsById($id){
+        $sql = "SELECT * FROM creations WHERE creation_id = ?";
+        $result = $this->conn->prepare($sql);
+        $result->execute([$id]);
+        return $result->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function updateCreationsImageDir($id, $baseimg_dir){
         $sql = "UPDATE creations SET baseimg_url = ? WHERE creation_id = ?";
         $result = $this->conn->prepare($sql);
         $result->execute([$baseimg_dir, $id]);
         return true;
+    }
+
+    public function readAllCraftsTutorial(){
+        $sql = "SELECT * FROM tutorials";
+        $result = $this->conn->prepare($sql);
+        $result->execute();
+        return $result->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function readCraftsTutorialById($id){
+        $sql = "SELECT * FROM tutorials WHERE tutorial_id = ?";
+        $result = $this->conn->prepare($sql);
+        $result->execute([$id]);
+        return $result->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function readCraftsTutorialStepById($id){
+        $sql = "SELECT * FROM tutorials_step WHERE tutorial_id = ?";
+        $result = $this->conn->prepare($sql);
+        $result->execute([$id]);
+        return $result->fetchAll(PDO::FETCH_ASSOC);
     }
 }

@@ -5,18 +5,6 @@ const instructionImages = document.querySelectorAll('.instruction'); // Renamed 
 const instructionStepMessage = document.getElementById('instruction-step');
 const instructionDescriptionMessage = document.getElementById('instruction-description');
 
-// Assuming you have corresponding descriptions for each image.
-// You'll need to populate this array with your actual step descriptions.
-const descriptions = [
-    "Lampu meja minimalis ini menghadirkan nuansa hangat dan modern ke ruang kerja atau kamar tidur. Dengan desain elegan dan sentuhan kayu alami, lampu ini cocok untuk suasana produktif maupun relaksasi. Dilengkapi fitur pencahayaan LED hemat energi dan leher fleksibel untuk pencahayaan maksimal. (Deskripsi Langkah 1)",
-    "Pastikan semua bahan tersedia sebelum memulai. Siapkan botol bekas yang bersih dan kering, alat potong yang tajam, serta bahan dekoratif seperti cat atau kain. (Deskripsi Langkah 2)",
-    "Potong bagian bawah botol dengan hati-hati sesuai desain yang diinginkan. Gunakan alat pelindung diri seperti sarung tangan untuk menghindari cedera. (Deskripsi Langkah 3)",
-    // Add more descriptions here corresponding to your images
-    "Ini adalah deskripsi untuk langkah keempat.",
-    "Langkah terakhir adalah penyelesaian dan pengujian lampu Anda."
-];
-
-
 let numberIndex = 0; // Start with 0 for array indexing
 
 const imageCount = instructionImages.length;

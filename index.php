@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="id">
     <head>
@@ -24,7 +26,7 @@
                     <h2>Temukan inspirasi, pelajari cara, dan bagikan hasil karyamu dari bahan bekas.</h2>
                 </div>
                 <div class="hero-button">
-                    <a href="#" class="button-green">Upload</a>
+                    <a href="crafts-tutorial-upload.php" class="button-green">Upload</a>
                 </div>
             </div>
         </div>
