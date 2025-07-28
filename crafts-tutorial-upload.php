@@ -1,15 +1,6 @@
 <?php
     require_once 'config.php';
     $conn = new DBConn();
-
-    if(isset($_POST["submit"])){
-        session_start();
-        $_SESSION['POST'] = $_POST;
-        $_SESSION['FILE_POST'] = $_FILES;
-        $_SESSION['HEAD'] = "crafts-tutorial-upload.php";
-        header("Location:crafts-process.php");
-        exit;
-    }
 ?>
 
 <!DOCTYPE html>
@@ -40,8 +31,8 @@
         </div>
 
         <div class="form-content">
-            <form id="tutorialForm" enctype="multipart/form-data" action="" method="post">
-
+            <form id="tutorialForm" enctype="multipart/form-data" action="crafts-process.php" method="post">
+                <input type="hidden" name="header" value="crafts-tutorial">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="nama_kamu">Nama kamu</label>
@@ -93,7 +84,7 @@
                     <div class="content-group">
                         <h5 class="content-title">Bahan dan alat yang dibutuhkan :</h5>
                         <div class="textarea-container">
-                            <textarea id="bahan_alat" name="bahan_alat" placeholder="-1 buah kardus ukuran sedang&#10;- Gunting dan cutter&#10;- Lem tembak atau lem putih&#10;- Kertas warna atau cat akrilik" required>
+                            <textarea id="bahan_alat" name="bahan_alat" placeholder="-1 buah kardus ukuran sedang &#10;- Gunting dan cutter&#10;- Lem tembak atau lem putih&#10;- Kertas warna atau cat akrilik" required>
                             </textarea>
                         </div>
                     </div>
