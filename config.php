@@ -43,7 +43,14 @@ class DBConn{
         values (?, ?, ?, ?, ?, ?, ?)";
         $result = $this->conn->prepare($sql);
         $result->execute([$name, $title, $description, $tools, $time_added, $email, $otp]); 
-        return 0;
+        return true;
+    }
+
+    public function updateCraftsTutorialImageDir($id, $baseimg_url){
+        $sql = "UPDATE tutorials SET baseimg_url = ? WHERE tutorial_id = ?";
+        $result = $this->conn->prepare($sql);
+        $result->execute([$baseimg_url, $id]);
+        return true;
     }
 
     public function readCategoryName(){
@@ -65,7 +72,6 @@ class DBConn{
         $result = $this->conn->prepare($sql);
         $result->execute([$name, $title, $time]);
         $row = $result->fetch(PDO::FETCH_ASSOC);
-
         if($row){
             return $row["tutorial_id"];
         }
@@ -90,10 +96,36 @@ class DBConn{
         $result = $this->conn->prepare($sql);
         $result->execute([$id, $step, $imageurl, $description]);
         error_log("Upload Successful");
-        return 0;
+        return true;
     }
 
     public function checkValidityCraftsTutorial($id){
+        return true;
+    }
+
+    public function uploadCreations($name, $cat_id, $title, $description, $time_added, $email = "none", $otp = "999"){
+        $sql = "INSERT INTO creations(creation_name, creation_category_id, creation_title, creation_description, creation_email, otp_id, time_added)
+        VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $result = $this->conn->prepare($sql);
+        $result->execute([$name, $cat_id, $title, $description, $email, $otp, $time_added]);
+        return true;
+    }
+
+    public function readCreationsId($name, $title, $time){
+        $sql = "SELECT creation_id FROM creations WHERE creation_name = ? AND creation_title = ? AND time_added = ?";
+        $result = $this->conn->prepare($sql);
+        $result->execute([$name, $title, $time]);
+        $row = $result->fetch(PDO::FETCH_ASSOC);
+        if($row){
+            return $row["creation_id"];
+        }
+        return false;
+    }
+
+    public function updateCreationsImageDir($id, $baseimg_dir){
+        $sql = "UPDATE creations SET baseimg_url = ? WHERE creation_id = ?";
+        $result = $this->conn->prepare($sql);
+        $result->execute([$baseimg_dir, $id]);
         return true;
     }
 }
