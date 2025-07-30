@@ -19,6 +19,7 @@
     <script src="js/navbar.js"></script>
     <script src="js/index.js"></script>
     <script src="js/sidebar.js"></script>
+    <script src="js/creation.js"></script>
 </head>
 
 <body>
@@ -95,7 +96,7 @@
 
         <main class="content-area">
             <h2 class="green">Creations</h2>
-            <p style="letter-spacing: 1.5px">Lorem ipsum </p>
+            <p style="letter-spacing: 1.5px">Temukan kreasi yang lain telah buat!</p>
 
             <div class="search-container">
                 <div class="search-box">
@@ -144,13 +145,17 @@
                                 <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
                             </div>
                             <div class="options-dropdown">
-                                <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span>
+                                <span id="dots-icon">&#x2022;&#x2022;&#x2022;</span>
+                                <div id="dots-dropdown active" class="option-links">
+                                    <a href="creation.php?downloadFile=<?=$info['creation_id']?>">Unduh Gambar</a>
+                                    <hr>
+                                    <a href="">Copy Link</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="box-text-frame">
                         <h3><?=$info['creation_title']?></h3>
-                        <p class="small black light"><?=$info['creation_description']?></p>
                     </div>
                 </div>
                 <?php 

@@ -119,6 +119,7 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 70vh;
+    padding-top: calc(10vh);
 }
 
 .content {

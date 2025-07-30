@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/start-quiz_styles.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/navbar.js"></script>
 </head>
 <body>
     <header class="header">

@@ -498,6 +498,30 @@ background: #e6d199;
     justify-content: center;
 }
 
+.options-dropdown{
+    position: relative;
+}
+
+.option-links{
+    width: max-content;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid #C8AFAF;
+    background-color: white;
+
+     * + * {
+        border-top: 1px solid #C8AFAF;
+    }
+}
+
+.option-links.active{
+    display: flex;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1200px) {
 .tutorial-grid {
@@ -592,10 +616,6 @@ color: #999;
 padding: 0 4px;
 font-size: 13px;
 }
-
-
-
-
 
 @media (max-width: 1200px) {
 .tutorial-grid {

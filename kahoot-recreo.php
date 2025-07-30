@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/kahoot-style.css">
             <link rel="stylesheet" href="/css/navbar.css">
+            <script src="js/navbar.js"></script>
 </head>
 <body>
     <header class="header">
-        <header class="header">
         <?php include('navbar.html')?>
     </header>
         <main>
