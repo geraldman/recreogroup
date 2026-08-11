@@ -17,7 +17,7 @@
         <?php include('navbar.html')?>
         <div class="hero-wrap body-margin">
             <div class="hero-image-section">
-                <img src="img/landing-page-photo.jpg" alt="">
+                <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15f?auto=format&fit=crop&q=80&w=1000" alt="Recycling Creativity">
             </div>
             <div class="hero-text-button-section">
                 <div class="hero-text">
@@ -52,7 +52,7 @@
             </div>
             <div class="wrap-our-goals">
                 <div class="our-goals-block vertical">
-                    <img src="img/vertical-1-picture.png" alt="">
+                    <img src="https://images.unsplash.com/photo-1618477461853-cf6ed80fbfc9?auto=format&fit=crop&q=80&w=500" alt="Crafting">
                     <div class="text-wrap">
                         <p class="small bold">Recreo transforms waste into wonder one creation at a time</p>
                         <p class="small">What we throw away still holds magic. With a little creativity, 
@@ -68,10 +68,10 @@
                             <p class="small bold">Recreo is where old materials find new meaning</p>
                             <p class="small">Don't throw it out give it a second life. Here, forgotten things are reborn as art, tools, and ideas that inspire.</p>
                         </div>
-                        <img src="img/horizontal-1-picture.png" alt="">
+                        <img src="https://images.unsplash.com/photo-1584445584489-3549646c2409?auto=format&fit=crop&q=80&w=500" alt="Recycled materials">
                     </div>
                     <div class="our-goals-block horizontal two">
-                        <img src="img/horizontal-2-picture.png" alt="">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=500" alt="Sustainability">
                         <div class="text-wrap">
                             <p class="small bold">Turning trash into creativity, and creativity into change</p>
                             <p class="small">Art has power.<br>
@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 <div class="our-goals-block vertical two">
-                    <img src="img/vertical-2-picture.png" alt="">
+                    <img src="https://images.unsplash.com/photo-1605600659908-0ef719419d41?auto=format&fit=crop&q=80&w=500" alt="Handmade art">
                     <div class="text-wrap">
                         <p class="small bold">Recreate the world, beautifully</p>
                         <p class="small">You don't need new things to make something amazing. 
@@ -107,28 +107,28 @@
             <div class="box-container">
                 <div class="box-frame one">
                     <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
+                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
                     </div>
                     <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
                     <a href="#" class="box-button">Lihat ide ini</a>
                 </div>
                 <div class="box-frame two">
                     <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
+                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
                     </div>
                     <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
                     <a href="#" class="box-button">Lihat ide ini</a>
                 </div>
                 <div class="box-frame three">
                     <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
+                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
                     </div>
                     <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
                     <a href="#" class="box-button">Lihat ide ini</a>
                 </div>
                 <div class="box-frame four">
                     <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
+                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
                     </div>
                     <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
                     <a href="#" class="box-button">Lihat ide ini</a>
@@ -147,7 +147,7 @@
             <div class="box-container">
                 <div class="box-frame one">
                     <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
+                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
                         <div class="action-buttons">
                             <div class="likes-section">
                                 <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
@@ -165,7 +165,7 @@
                 </div>
                 <div class="box-frame two">
                     <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
+                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
                         <div class="action-buttons">
                             <div class="likes-section">
                                 <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
@@ -183,7 +183,7 @@
                 </div>
                 <div class="box-frame three">
                     <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
+                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
                         <div class="action-buttons">
                             <div class="likes-section">
                                 <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
@@ -201,7 +201,7 @@
                 </div>
                 <div class="box-frame four">
                     <div class="box-image-frame">
-                        <img src="img/craft-picture-1.png" alt="">
+                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
                         <div class="action-buttons">
                             <div class="likes-section">
                                 <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
