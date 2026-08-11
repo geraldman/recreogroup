@@ -107,30 +107,38 @@
             <div class="box-container">
                 <div class="box-frame one">
                     <div class="box-image-frame">
-                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
+                        <img src="https://images.unsplash.com/photo-1518331539958-30113c2c10b7?auto=format&fit=crop&q=80&w=500" alt="Lampu Botol Kaca">
                     </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
+                    <div class="box-text-frame">
+                        <h3>Lampu Estetik dari Botol Kaca Bekas</h3>
+                    </div>
                     <a href="#" class="box-button">Lihat ide ini</a>
                 </div>
                 <div class="box-frame two">
                     <div class="box-image-frame">
-                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
+                        <img src="https://images.unsplash.com/photo-1584445584489-3549646c2409?auto=format&fit=crop&q=80&w=500" alt="Tas Kain Perca">
                     </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
+                    <div class="box-text-frame">
+                        <h3>Tas Belanja Ramah Lingkungan Kain Perca</h3>
+                    </div>
                     <a href="#" class="box-button">Lihat ide ini</a>
                 </div>
                 <div class="box-frame three">
                     <div class="box-image-frame">
-                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
+                        <img src="https://images.unsplash.com/photo-1605600659873-d808a1d14b13?auto=format&fit=crop&q=80&w=500" alt="Pot Tanaman Botol Plastik">
                     </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
+                    <div class="box-text-frame">
+                        <h3>Pot Gantung Cantik dari Botol Plastik</h3>
+                    </div>
                     <a href="#" class="box-button">Lihat ide ini</a>
                 </div>
                 <div class="box-frame four">
                     <div class="box-image-frame">
-                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
+                        <img src="https://images.unsplash.com/photo-1531747056595-07f6cbbe10ad?auto=format&fit=crop&q=80&w=500" alt="Hiasan Dinding CD Bekas">
                     </div>
-                    <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
+                    <div class="box-text-frame">
+                        <h3>Hiasan Dinding Berkilau dari Kepingan CD</h3>
+                    </div>
                     <a href="#" class="box-button">Lihat ide ini</a>
                 </div>
             </div>
@@ -143,14 +151,13 @@
                 <div class="h2-inline-wrap">
                     <h2 class="green">See what they created</h2>
                 </div>
-            </div>
-            <div class="box-container">
+            </div>            <div class="box-container">
                 <div class="box-frame one">
                     <div class="box-image-frame">
-                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
+                        <img src="https://images.unsplash.com/photo-1517457210599-4c2f6d2fdb11?auto=format&fit=crop&q=80&w=500" alt="Celengan Kardus">
                         <div class="action-buttons">
                             <div class="likes-section">
-                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
+                                <span class="like-icon">&#x2764;</span> <span class="like-count">245 Likes</span>
                             </div>
                             <div class="options-dropdown">
                                 <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
@@ -158,14 +165,13 @@
                         </div>
                     </div>
                     <div class="box-text-frame">
-                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
-                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
+                        <h3>Celengan Rumah dari Kardus Sepatu</h3>
+                        <p class="small black light">Iseng manfaatin kardus sepatu bekas yang menumpuk. Hasilnya lumayan buat ajarin anak nabung!</p>
                     </div>
                 </div>
                 <div class="box-frame two">
                     <div class="box-image-frame">
-                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
+                        <img src="https://images.unsplash.com/photo-1528310263467-33f7c4eb0308?auto=format&fit=crop&q=80&w=500" alt="Mainan Kayu">
                         <div class="action-buttons">
                             <div class="likes-section">
                                 <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
@@ -176,17 +182,16 @@
                         </div>
                     </div>
                     <div class="box-text-frame">
-                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
-                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
+                        <h3>Mobil-mobilan Sisa Potongan Kayu</h3>
+                        <p class="small black light">Daripada dibuang, sisa kayu palet ini saya ubah jadi mainan aman tanpa bahan kimia tajam.</p>
                     </div>
                 </div>
                 <div class="box-frame three">
                     <div class="box-image-frame">
-                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
+                        <img src="https://images.unsplash.com/photo-1550100136-e092101726f4?auto=format&fit=crop&q=80&w=500" alt="Origami Kertas Koran">
                         <div class="action-buttons">
                             <div class="likes-section">
-                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
+                                <span class="like-icon">&#x2764;</span> <span class="like-count">312 Likes</span>
                             </div>
                             <div class="options-dropdown">
                                 <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
@@ -194,17 +199,16 @@
                         </div>
                     </div>
                     <div class="box-text-frame">
-                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
-                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
+                        <h3>Hiasan Bunga dari Kertas Koran Lama</h3>
+                        <p class="small black light">Koran bekas koran tahun lalu ternyata cantik banget dibuat mawar untuk hiasan ruang tamu.</p>
                     </div>
                 </div>
                 <div class="box-frame four">
                     <div class="box-image-frame">
-                        <img src="https://images.unsplash.com/photo-1615800098779-1be32e60cca3?auto=format&fit=crop&q=80&w=500" alt="Craft tutorial">
+                        <img src="https://images.unsplash.com/photo-1621252179027-94459d278660?auto=format&fit=crop&q=80&w=500" alt="Tempat Pensil Kaleng">
                         <div class="action-buttons">
                             <div class="likes-section">
-                                <span class="like-icon">&#x2764;</span> <span class="like-count">187 Likes</span>
+                                <span class="like-icon">&#x2764;</span> <span class="like-count">156 Likes</span>
                             </div>
                             <div class="options-dropdown">
                                 <span class="dots-icon">&#x2022;&#x2022;&#x2022;</span> 
@@ -212,12 +216,11 @@
                         </div>
                     </div>
                     <div class="box-text-frame">
-                        <h3>Cara membuat lampu dari botol bekas anti ribet</h3>
-                        <p class="small black light">Plastik mungkin praktis, tapi bahayanya besar untuk bumi. 
-                            Pelajari dampaknya dan mulai aksi kecilmu hari ini!</p>
+                        <h3>Tempat Pensil Estetik Kaleng Susu</h3>
+                        <p class="small black light">Cuma modal cat semprot dan tali rami, kaleng susu bekas jadi tempat alat tulis yang sangat elegan.</p>
                     </div>
                 </div>
-                <div class="accessory-background exclamation">
+            </div>      <div class="accessory-background exclamation">
                     <img src="img/background/exclamation-background.png" alt="" srcset="">
                 </div>
             </div>
