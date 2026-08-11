@@ -1,0 +1,12 @@
+{
+  "name": "recreogroup",
+  "version": "1.0.0",
+  "description": "Recreo Group - Platform edukasi kreatif daur ulang",
+  "scripts": {
+    "dev": "php -S localhost:8080",
+    "start": "php -S localhost:8080"
+  },
+  "keywords": ["php", "recreo", "daur-ulang", "crafts"],
+  "author": "Recreo Group",
+  "license": "ISC"
+}

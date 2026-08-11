@@ -39,6 +39,7 @@ class DBConn{
     }
 
     public function uploadCraftsTutorial($name, $title, $description, $tools, $time_added, $email = "none", $otp = "999"){
+        if(!$this->conn) return false;
         $sql = "INSERT INTO tutorials(tutor_name, tutor_title, tutor_description, tools, time_added, tutor_email, otp_id)
         values (?, ?, ?, ?, ?, ?, ?)";
         $result = $this->conn->prepare($sql);
@@ -47,6 +48,7 @@ class DBConn{
     }
 
     public function readCategoryName(){
+        if(!$this->conn) return [];
         $sql = "SELECT category_id, category_name FROM categories";
         $result = $this->conn->prepare($sql);
         $result->execute();
@@ -54,6 +56,7 @@ class DBConn{
     }
 
     public function tutorialCategoryUpload($tutor_id, $cat_id){
+        if(!$this->conn) return false;
         $sql = "INSERT INTO tutorial_category(tutorial_id, category_id) values (?, ?)";
         $result = $this->conn->prepare($sql);
         $result->execute([$tutor_id, $cat_id]);
@@ -61,6 +64,7 @@ class DBConn{
     }
 
     public function readCraftsTutorialId($name, $title, $time){
+        if(!$this->conn) return false;
         $sql = "SELECT tutorial_id FROM tutorials WHERE tutor_name = ? AND tutor_title = ? AND time_added = ?";
         $result = $this->conn->prepare($sql);
         $result->execute([$name, $title, $time]);
@@ -74,6 +78,7 @@ class DBConn{
 
     // checking if the name's already in the table (boolean)
     public function checkTitleValidity($title){
+        if(!$this->conn) return false;
         $sql = "SELECT tutor_title FROM tutorials WHERE tutor_title = ?";
         $result = $this->conn->prepare($sql);
         $result->execute($title);
@@ -85,6 +90,7 @@ class DBConn{
     }
     
     public function uploadTutorialSteps($id, $step, $imageurl, $description){
+        if(!$this->conn) return false;
         $sql = "INSERT INTO tutorials_step(tutorial_id, tutorial_step_count, tutorial_image_url, tutorial_step_description)
         VALUES (?, ?, ?, ?)";
         $result = $this->conn->prepare($sql);
