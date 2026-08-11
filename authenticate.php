@@ -3,9 +3,9 @@
 <html>
     <head>
         <title>Authenticate</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/creates.css">
-        <link rel="stylesheet" href="css/authenticate.css">
+        <link rel="stylesheet" href="css/style.css?v=2">
+        <link rel="stylesheet" href="css/creates.css?v=2">
+        <link rel="stylesheet" href="css/authenticate.css?v=2">
         <script src="js/authenticate.js"></script>
     </head>
     <body class="auth-margin">

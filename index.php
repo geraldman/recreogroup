@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Recreo Group</title>
-        <link rel="stylesheet" href="css/footer.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/navbar.css">
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/footer.css?v=2">
+        <link rel="stylesheet" href="css/style.css?v=2">
+        <link rel="stylesheet" href="css/navbar.css?v=2">
+        <link rel="stylesheet" href="css/index.css?v=2">
+        <link rel="stylesheet" href="css/about.css?v=2">
         <script src="js/navbar.js"></script>
         <script src="js/index.js"></script>
     </head>
@@ -112,7 +112,7 @@
                     <div class="box-text-frame">
                         <h3>Lampu Estetik dari Botol Kaca Bekas</h3>
                     </div>
-                    <a href="#" class="box-button">Lihat ide ini</a>
+                    <a href="botol-plastik-tutorial.php" class="box-button">Lihat ide ini</a>
                 </div>
                 <div class="box-frame two">
                     <div class="box-image-frame">

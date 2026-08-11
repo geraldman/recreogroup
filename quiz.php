@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recreo Group - Eco Quiz</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <link rel="stylesheet" href="css/navbar.css?v=2">
+    <link rel="stylesheet" href="css/footer.css?v=2">
     <script src="js/navbar.js" defer></script>
     <style>
         .quiz-container {
