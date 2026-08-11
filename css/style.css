@@ -1,461 +1,500 @@
-*{
+/* =============================================
+   RECREO GROUP - Global Styles
+   Modern, Elegant, Responsive
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap');
+
+/* ---- Reset ---- */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: #fff9eb;
+:root {
+    --green-primary: #2E8264;
+    --green-dark: #1e5c47;
+    --green-light: #D8FCD3;
+    --green-mid: #468f74;
+    --accent-yellow: #f5c842;
+    --accent-warm: #7f6044;
+    --bg-cream: #faf8f2;
+    --bg-white: #ffffff;
+    --text-dark: #1a1a2e;
+    --text-body: #3d4a40;
+    --text-muted: #7a8c83;
+    --border-radius-sm: 12px;
+    --border-radius-md: 20px;
+    --border-radius-lg: 32px;
+    --border-radius-xl: 50px;
+    --shadow-sm: 0 2px 12px rgba(46,130,100,0.08);
+    --shadow-md: 0 8px 32px rgba(46,130,100,0.14);
+    --shadow-lg: 0 20px 60px rgba(46,130,100,0.18);
+    --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@font-face{
-    font-family: 'inter';
-    src: url('../fonts/inter/Inter-VariableFont_opsz\,wght.ttf');
-
+html {
+    scroll-behavior: smooth;
 }
 
-@font-face{
-    font-family: 'inter-italic';
-    src: url('../fonts/inter/Inter-Italic-VariableFont_opsz\,wght.ttf');
+body {
+    background-color: var(--bg-cream);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-body);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-@font-face{
-    font-family: 'spartan-league';
-    src: url('../fonts/league-spartan/LeagueSpartan-VariableFont_wght.ttf');
+/* ---- Typography ---- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.2;
 }
 
-@font-face{
-    font-family: 'arial-unicode-ms';
-    src: url('../fonts/arial-unicode-ms/arial\ unicode\ ms.otf');
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
-@font-face{
-    font-family: 'arial-unicode-ms-bold';
-    src:url('../fonts/arial-unicode-ms/arial\ unicode\ ms\ bold.otf');
+h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2.8rem);
+    color: var(--text-dark);
+    text-shadow: none;
+    line-height: 1.25;
 }
 
-a{
+h2.green {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    color: var(--green-primary);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    text-shadow: none;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+h2.green.medium {
+    font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+}
+
+h2.green.medium.inverted {
+    color: white;
+}
+
+h2.green.small {
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+}
+
+h2.green.smaller {
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+}
+
+h3 {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-body);
+    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+    line-height: 1.7;
+    letter-spacing: 0;
+}
+
+p.small {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(0.8rem, 1.3vw, 0.95rem);
+    color: rgba(255,255,255,0.88);
+    letter-spacing: 0;
+    line-height: 1.6;
+}
+
+p.small.white {
+    color: white;
+}
+
+p.small.bold {
+    color: white;
+    font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.4;
+}
+
+p.small.light.black {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-body);
+}
+
+p.small.bold.black,
+p.small.black {
+    color: var(--text-dark);
+}
+
+p.light-small.black {
+    font-size: 0.875rem;
+    color: var(--text-body);
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+p.small.italic.bold {
+    color: var(--text-dark);
+    font-style: italic;
+    font-size: 0.875rem;
+}
+
+p.smaller {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 0;
+    line-height: 1.5;
+}
+
+p.smaller.black,
+p.smaller.bold.black {
+    color: var(--text-dark);
+}
+
+p.smaller.bold {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+p.bold.black {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+p.username {
+    color: var(--accent-warm);
+    letter-spacing: 0;
+}
+
+p.username.big {
+    font-weight: 600;
+}
+
+p.username.small {
+    font-size: 0.95rem;
+    color: rgba(127, 96, 68, 0.75);
+}
+
+p.waste-category {
+    font-size: 0.8rem;
+    padding: 2px 12px;
+    color: var(--green-primary);
+    letter-spacing: 0;
+    border: 1.5px solid var(--green-primary);
+    background-color: var(--green-light);
+    width: fit-content;
+    border-radius: var(--border-radius-sm);
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+p.textcategory {
+    font-weight: 600;
+    letter-spacing: 0;
+    font-size: 0.8rem;
+    color: var(--text-dark);
+}
+
+p.textcategory.white {
+    color: white;
+}
+
+p.upload-text {
+    letter-spacing: 0;
+    line-height: 1.5;
+}
+
+label, p.smaller {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 0;
+    line-height: 1.5;
+}
+
+label.smaller.bold,
+#tutorialForm label,
+#uploadForm label {
+    color: var(--text-dark);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.6;
+    padding-left: 0;
+}
+
+/* ---- Links ---- */
+a {
     text-decoration: none;
-    font-family: 'inter';
-    color: black;
-    font-weight:500;
-    font-size: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
 }
 
-a.box-button{
+a.box-button {
     width: 100%;
     text-align: center;
-    background-color: #2E8264;
+    background: linear-gradient(135deg, var(--green-primary), var(--green-mid));
     color: white;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    font-size: 14px;
-    padding: 5px;
-    transition: 0.3s;
+    border: 1.5px solid transparent;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: var(--transition);
 }
 
-a.box-button:hover{
-    color: #2E8264;
-    background-color: white;
-    border: 1px solid #2E8264;
+a.box-button:hover {
+    background: white;
+    color: var(--green-primary);
+    border-color: var(--green-primary);
 }
 
-h3{
-    font-family: 'spartan-league';
-    font-weight: 575;
-    color: black;
-}
-
-h2{
-    font-family: 'spartan-league';
-    color: #535c3c;
-    font-size: 3.125vw;
-    line-height: 3.819vw;
-    text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
-}
-
-h2.green{
-    display: inline-block;
-    font-family: 'spartan-league';
-    color: #2e8264;
-    font-size: 60px;
-    text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
-    line-height: normal;
-}
-
-h2.green.medium.inverted{
+/* ---- Buttons ---- */
+.button-green {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    border-radius: var(--border-radius-xl);
+    border: 1.5px solid transparent;
+    background: linear-gradient(135deg, var(--green-primary), var(--green-mid));
     color: white;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(46,130,100,0.25);
+    cursor: pointer;
 }
 
-
-h2.green.medium{
-    display: inline-block;
-    font-family: 'spartan-league';
-    color: #2e8264;
-    font-size: 40px;
-    text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
-    line-height: normal;
+.button-green:hover {
+    background: transparent;
+    border-color: var(--green-primary);
+    color: var(--green-primary);
+    box-shadow: none;
+    transform: translateY(-1px);
 }
 
-h2.green.small{
-    font-size: 34px;
+/* ---- Layout ---- */
+.body-margin {
+    margin: 0 clamp(1rem, 8vw, 10rem);
 }
 
-h2.green.smaller{
-    font-size: 30px;
-}
-
-p.username{
-    color: rgba(103, 54, 11, 0.6);
-    letter-spacing: normal; 
-}
-
-p.username.big{
-    font-weight: 500;
-}
-
-p.username.small{
-    font-size: 17px;
-    color: rgba(81, 57, 49, 0.7);
-}
-
-.content-left-side p, .instruction-description p{
-    color: rgba(103, 54, 11, 1);
-}
-
-p.waste-category{
-    font-size: 15px;
-    padding: 0 15px;
-    color: #2E8264;
-    letter-spacing: normal;
-    border: 1px solid #2E8264;
-    background-color: #D8FCD3;
-    width: fit-content;
-    border-radius: 8px;
-    text-transform: capitalize;
-}
-
-p{
-    font-family: 'inter';
-    color: #641919;
-    font-size: 20px;
-    letter-spacing: 3px;
-}
-
-p.upload-text{
-    letter-spacing: 1.5px;
-    line-height: normal;
-}
-
-p.bold.black{
-    font-size: 14px;
-    font-weight: bold;
-    color: black;
-}
-
-p.light-small.black{
-    font-size: 14px;
-    color: black;
-    font-weight: 400;
-    letter-spacing: normal;
-}
-
-p.small.italic.bold{
-    color: black;
-    font-style: italic;
-    font-size: 14px;
-}
-
-p.small{
-    font-family: 'arial-unicode-ms';
-    letter-spacing: normal;
-    color: #d9d9d9;
-    font-size: 1.111vw;
-}
-
-p.small.white{
-    color: white;
-}
-
-p.small.light.black{
-    font-family: 'spartan-league';
-    font-weight: normal;
-    font-size: 15px;
-}
-
-p.smaller, label{
-    font-family: 'arial-unicode-ms';
-    letter-spacing: normal;
-    color: white;
-    font-size: 12px;
-    line-height: 12px;
-}
-
-p.smaller.black, .small.bold.black, .small.black, label.smaller.bold, p.smaller.bold.black{
-    color: black;
-}
-
-p.smaller.bold{
-    color: white;
-    font-size: 12px;
-    font-family: 'arial-unicode-ms-bold';
-    line-height: 12px;
-    font-weight: 700;
-}
-
-p.small.bold, label.small.bold{
-    color: white;
-    font-size: 21px;
-    letter-spacing: 0.5px;
-    font-family: 'arial-unicode-ms-bold';
-    line-height: 20px;
-}
-
-p.textcategory{
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    font-size: 13px;
-    color: black;
-}
-
-p.textcategory.white{
-    color: white;
-}
-
-label.smaller.bold, #tutorialForm label, #uploadForm label{
-    color: black;
-    font-size: 15px;
-    font-family: 'arial-unicode-ms-bold';
-    line-height: 20px;
-    padding-left: 10px;
-}
-
-.body-margin{
-    margin: auto 11.111vw;
-}
-
-.modified-letter-spacing{
+.modified-letter-spacing {
     margin-top: 5px;
-    letter-spacing: 1.5px;
-    line-height: 25px;
+    letter-spacing: 0;
+    line-height: 1.7;
 }
 
-.button-green{
-    display: inline-block;
-    width: auto;
-    padding: 0.833vw 2.778vw;
-    border-radius:2.083vw;
-    border: 1px solid transparent;
-    background-color: #2E8264;
-    color: white;
-    transition: 0.25s ease;
-}
-
-.button-green:hover{
-    background-color: white;
-    border: 1px solid #2E8264;
-    color: #2E8264;
-}
-
-.background-accessory{
-    position: absolute;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.7;
-}
-
-.input{
+/* ---- Input ---- */
+.input {
     width: 100%;
-    margin-top: 7px;
-    border: 2px solid rgba(70, 143, 116, 0.8);
-    padding: 10px 5px 10px 13px;
-    background-color: none;
-    border-radius: 10px;
+    margin-top: 6px;
+    border: 2px solid rgba(46, 130, 100, 0.25);
+    padding: 12px 16px;
+    background-color: white;
+    border-radius: var(--border-radius-sm);
     box-sizing: border-box;
     resize: none;
-    font-size: 14px;
+    font-size: 0.9rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-dark);
+    transition: border-color var(--transition);
+    outline: none;
 }
 
+.input:focus {
+    border-color: var(--green-primary);
+    box-shadow: 0 0 0 3px rgba(46, 130, 100, 0.12);
+}
+
+/* ---- Star Rating ---- */
 .star-rating {
     display: flex;
-    flex-direction: row-reverse; /* Display stars from right to left */
+    flex-direction: row-reverse;
     justify-content: center;
-    padding: 1.5rem;
-    gap: 15px;
+    padding: 1rem;
+    gap: 8px;
 }
 
-.star-display{
+.star-display {
     flex-direction: row;
     pointer-events: none;
-    font-size: 30px;
+    font-size: 1.5rem;
     padding: 0;
+    gap: 4px;
 }
 
 .star-rating input[type="radio"] {
-    display: none; /* Hide the actual radio buttons */
+    display: none;
 }
 
-.star{
-    color: #ccc;
+.star {
+    color: #ddd;
+    font-size: 1.5rem;
 }
 
-.star-rating label{
-    color: #ccc; /* Default star color (grey) */
+.star-rating label {
+    color: #ddd;
     cursor: pointer;
-    padding: 0 0.2rem;
-    font-size: 40px;
-    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    font-size: 2rem;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
-/* Hover effect: change color of stars to the left of the hovered star */
 .star-rating label:hover,
 .star-rating label:hover ~ label {
-    color: #ffcc00; 
-    transform: scale(1.1); 
+    color: var(--accent-yellow);
+    transform: scale(1.15);
 }
 
 .star-rating input[type="radio"]:checked ~ label,
-.star-display .star.filled{
-    color: #ffcc00; /* Yellow when checked */
+.star-display .star.filled {
+    color: var(--accent-yellow);
 }
 
-.rounded-lg {
-    transition: border-radius 0.3s ease-in-out;
-}
-
-.hero-wrap{ 
+/* ---- Hero ---- */
+.hero-wrap {
     display: inline-flex;
-    margin-top: 100px;
+    margin-top: 90px;
     height: max-content;
-    gap: 50px;
+    gap: 3rem;
+    align-items: center;
 }
 
-.accessory-background{
+/* ---- Accessory backgrounds ---- */
+.accessory-background {
     z-index: -1;
     position: relative;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 .accessory-background img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 0px;
-    border: 0;
+    border-radius: 0;
     border: none;
 }
 
-.flex-column{
+/* ---- Flex utility ---- */
+.flex-column {
     display: flex;
     flex-direction: column;
 }
 
-.upload-content-button button, .form-actions button, .overlay-action-buttons button{
-    padding: 12px 24px;
-    border-radius: 15px;
-    border: 1px solid transparent;
+/* ---- Action Buttons (upload form) ---- */
+.upload-content-button button,
+.form-actions button,
+.overlay-action-buttons button {
+    padding: 10px 22px;
+    border-radius: var(--border-radius-md);
+    border: 1.5px solid transparent;
     color: white;
     font-weight: 600;
     opacity: 1;
-    transition: 0.3s;
-    font-size: 15px;
+    transition: var(--transition);
+    font-size: 0.875rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    cursor: pointer;
 }
 
-.upload-content-button button:disabled, .form-actions button:disabled, .overlay-action-buttons button:disabled{
-    opacity: 0.5;
+.upload-content-button button:disabled,
+.form-actions button:disabled,
+.overlay-action-buttons button:disabled {
+    opacity: 0.4;
     pointer-events: none;
 }
 
-button[id="addStep"], button[id="nextStep"]{
-    background-color:#2e8264;
+button#addStep, button#nextStep {
+    background: var(--green-primary);
 }
 
-button[id="addStep"]:hover, button[id="nextStep"]:hover{
-    background-color:white;
-    border: 1px solid #2E8264;
-    color: #2E8264;
+button#addStep:hover, button#nextStep:hover {
+    background: white;
+    border-color: var(--green-primary);
+    color: var(--green-primary);
 }
 
-button[id="deleteStep"], button[id="generateCodeBtn"], button[id="previousStep"]{
-    background-color: grey;
+button#deleteStep, button#generateCodeBtn, button#previousStep {
+    background-color: #8a9ba5;
 }
 
-button[id="deleteStep"]:hover, button[id="generateCodeBtn"]:hover, button[id="previousStep"]:hover{
-    color: grey;
-    border: 1px solid grey;
+button#deleteStep:hover, button#generateCodeBtn:hover, button#previousStep:hover {
+    color: #8a9ba5;
+    border-color: #8a9ba5;
     background-color: white;
 }
 
-button[id="resetBtn"]{
-    background-color: #df0004;
+button#resetBtn {
+    background-color: #e05260;
 }
 
-button[id="resetBtn"]:hover{
-    color: #df0004;
-    border: 1px solid #df0004;
+button#resetBtn:hover {
+    color: #e05260;
+    border-color: #e05260;
     background-color: white;
 }
 
-@media(max-width: 1024px){
+/* ---- Content Left Side ---- */
+.content-left-side p, .instruction-description p {
+    color: var(--accent-warm);
+}
 
-    .hero-wrap{
-        margin-top: calc(8.333vw + 30px);
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+    .hero-wrap {
+        margin-top: clamp(5rem, 10vw, 8rem);
     }
-
-    h2{
-        font-size: 40px;
-        line-height: 43px;
+    p.small.bold {
+        font-size: 0.95rem;
     }
-    p{
-        font-size: 15px;
-    }
-    p.small.bold{
-        font-size: 2.241vw;
-        line-height: 2.437vw;
-    }
-
-    p.small{
-        font-size: 1.994vw;
-        line-height: 2.144vw;
+    p.small {
+        font-size: 0.875rem;
     }
 }
 
-@media(max-width: 768px){
-    p.small.bold{
-        font-size: 15px;
-        line-height: normal;
+@media (max-width: 768px) {
+    .body-margin {
+        margin: 0 1.5rem;
     }
-
-    p.small{
-        font-size: 12px;
-        line-height: normal;
+    p.small.bold {
+        font-size: 0.875rem;
     }
-
-    .visimisi-text.small.white{
-        font-size: 15px;
+    p.small {
+        font-size: 0.825rem;
+    }
+    .visimisi-text.small.white {
+        font-size: 0.9rem;
     }
 }
 
-@media(max-width: 480px){
-    h2{
-        font-size: 30px;
-        line-height: 32px;
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.6rem;
     }
-
-    h2.green{
-        display: inline-block;
-        font-family: 'spartan-league';
-        color: #2e8264;
-        font-size: 40px;
-        text-shadow: -3px 0px 3px rgba(0, 0, 0, 0.3);
-        line-height: normal;
+    h2.green {
+        font-size: 2rem;
     }
-
-    h2.green.medium.inverted{
-        font-size: 30px;
+    h2.green.medium.inverted {
+        font-size: 1.5rem;
     }
-
-    p{
-        font-size: 15px;
+    p {
+        font-size: 0.9rem;
     }
 }

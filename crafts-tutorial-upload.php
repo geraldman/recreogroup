@@ -1,6 +1,7 @@
 <?php
     require_once 'config.php';
     $conn = new DBConn();
+    $categories = $conn->readCategoryName();
 
     if(isset($_POST["submit"])){
         session_start();
@@ -20,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReCreo Crafts Tutorial</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/creates.css">
+    <link rel="stylesheet" href="css/creates.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/navbar.js"></script>
@@ -53,10 +54,9 @@
                         <select id="kategori_bahan" name="kategori_bahan" required>
                             <option value="">Pilih kategori bahan</option>
                             <?php
-                            $categories = $conn->readCategoryName();
                             foreach($categories as $cat){
                                 ?>
-                                <option value="<?=($cat["category_id"])?>"><?=$cat["category_name"]?></option>
+                                <option value="<?=($cat["category_id"])?>">  <?=$cat["category_name"]?></option>
                                 <?php
                             }
                             ?>
